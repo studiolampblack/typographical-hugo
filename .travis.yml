@@ -20,5 +20,5 @@ install:
 
 script:
   - cd hugo-theme-test
-  - hugo -t tale-hugo --themesDir ../..
+  - hugo -t typographical-hugo --themesDir ../..
   - htmlproofer public --check-html --disable-external --allow-hash-href --checks-to-ignore LinkCheck
