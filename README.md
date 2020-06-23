@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/theramiyer/typographical-hugo.svg?branch=master)](https://travis-ci.com/theramiyer/typographical-hugo)
 
-This is a port of the [Tale theme for Jekyll](https://github.com/theramiyer/typographical) to Hugo. Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here](https://theramiyer.github.io/typographical/). I did not design this theme; I only ported it from Jekyll to Hugo.
+This is a port of the [Tale theme for Jekyll](https://github.com/theramiyer/typographical) to Hugo based on [Tale theme for Hugo](https://github.com/EmielH/tale-hugo). Typographical is a typography-focused theme, based on Tale, which is a minimal Jekyll theme curated for storytellers. Checkout the demo of Tale [here](https://chesterhow.github.io/tale/), and a demo of Typographical [here](https://blog.ramiyer.me).
 
 ![Tale screenshot](https://raw.githubusercontent.com/theramiyer/typographical-hugo/master/images/screenshot.png)
 
@@ -152,7 +152,8 @@ css = ["custom.css", "custom2.css"]
 
 Thanks
 
-- to [Chester How](//github.com/theramiyer) for creating the original [Tale theme for Jekyll](https://theramiyer.github.io/typographical/),
+- to [Emiel Hollander](//github.com/EmielH) for creating the [Tale theme for Hugo](https://github.com/EmielH/tale-hugo),
+- to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
 - to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which I used some useful snippets of code.
 
