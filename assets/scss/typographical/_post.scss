@@ -4,7 +4,7 @@
   &-info {
     color: $default-tint;
     font-family: $serif-secondary;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.02em;
     text-align: center;
 
     span {
@@ -21,15 +21,15 @@
   }
 
   &-line {
-    border-top: 0.4rem solid $default-shade;
+    border-top: 0.4rem solid $accent-color;
     display: block;
     margin: 0 auto 3rem;
     width: 4rem;
   }
 
   p {
-    margin: 0 0 1rem;
-    text-align: justify;
+    margin: 0 0 1em;
+    font-size: $base-font-size;
   }
 
   a:hover {
