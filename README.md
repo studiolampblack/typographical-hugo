@@ -1,4 +1,4 @@
-# Tale
+# Typographical
 
 [![Build Status](https://travis-ci.com/theramiyer/typographical-hugo.svg?branch=master)](https://travis-ci.com/theramiyer/typographical-hugo)
 
