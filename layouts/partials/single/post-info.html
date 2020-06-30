@@ -3,7 +3,11 @@
     {{- if .Params.Author }}
         {{ .Params.Author }}
     {{- else }}
-        {{ .Site.Params.Author }}
+        {{- if .Site.Author.url }}
+            <a href="{{ .Site.Author.url }}">{{ .Site.Author.name }}</a>
+        {{- else }}
+            {{ .Site.Author.name }}
+        {{- end }}
     {{- end }}
 
     {{- if .PublishDate }}
