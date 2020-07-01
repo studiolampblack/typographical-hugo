@@ -207,7 +207,7 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
 // footnote tweaks
 
 .post > .footnotes {
-  border-top: solid 1px $grey-2;
+  // border-top: solid 1px $grey-2;
 
   ol li, ol li p {
     font-size: 0.9 * $base-font-size;
