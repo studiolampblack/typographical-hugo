@@ -1,0 +1,3 @@
+<div class="yt-container">
+    <iframe src="//www.youtube.com/embed/{{- if $.Page.Params.spotify }}{{ $.Page.Params.youtube }}{{- else }}{{ .Get 0}}{{- end }}" frameborder="0" allowfullscreen class="video"></iframe>
+</div>
