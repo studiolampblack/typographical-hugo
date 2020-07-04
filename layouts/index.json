@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range where .Site.RegularPages "Type" "not in"  (slice "page" "json") -}}
+{{- range where .Site.RegularPages "Type" "in" "post" -}}
 {{- $.Scratch.Add "index" (dict "url" .Permalink "title" .Title "subtitle" .Params.subtitle "date" (.Date.Format "Jan 1, 2006")) -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
