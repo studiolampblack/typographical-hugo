@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <main>
-    <div class="post">
+    <div class="page">
         {{ partial "single/title.html" . }}
     
         {{ partial "single/header.html" . }}
@@ -44,7 +44,7 @@
                     <h4 id="{{ anchorize $CurrentMonth }}" class="archive-month">{{ substr $CurrentMonth 0 -5 }}</h4>
                     {{ $MyMonth = $CurrentMonth }}
                 {{ end }}
-                <p class="archive-post-list"><a href="{{ .Permalink }}">{{ .Title }}</a> | {{ dateFormat "Jan 02, 2006" .Date }}</p>
+                <p class="archive-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a> | {{ dateFormat "Jan 02, 2006" .Date }}</p>
             {{ end }}
         </section>
     
