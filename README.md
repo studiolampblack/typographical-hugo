@@ -4,8 +4,6 @@
 
 This is a port of the [Tale theme for Jekyll](https://github.com/theramiyer/typographical) to Hugo based on [Tale theme for Hugo](https://github.com/EmielH/tale-hugo). Typographical is a typography-focused theme, based on Tale, which is a minimal Jekyll theme curated for storytellers. Checkout the demo of Tale [here](https://chesterhow.github.io/tale/), and a demo of Typographical [here](https://blog.ramiyer.me).
 
-![Tale screenshot](https://raw.githubusercontent.com/theramiyer/typographical-hugo/master/images/screenshot.png)
-
 ## Installation
 
 ### 1. Install the theme
