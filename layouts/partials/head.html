@@ -15,12 +15,40 @@
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | toCSS $cssOptions }}
   		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:800|Alegreya:400,400i&subset=latin-ext">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:800|Alegreya:400,400i&subset=latin-ext&display=swap">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
 		{{ range .Site.Params.css -}}
 			<link rel="stylesheet" href="{{ . | relURL }}">
 		{{ end -}}
+
+		<!-- Social -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ .Permalink }}">
+		<meta name="twitter:url" content="{{ .Permalink }}">
+		<meta property="og:title" content="{{ .Title }}">
+		<meta name="twitter:title" content="{{ .Title }}">
+		{{- if isset .Params "image" -}}
+			<meta property="og:image" content="{{ .Params.image }}">
+			<meta name="twitter:image" content="{{ .Params.image }}">
+		{{- end -}}
+		{{- if .IsHome }}
+			<meta property="og:description" content="{{ .Site.Params.Description }}">
+			<meta name="twitter:description" content="{{ .Site.Params.Description }}">
+		{{- else if .Description }}
+			<meta property="og:description" content="{{ .Description }}">
+			<meta name="twitter:description" content="{{ .Description }}">
+		{{- else if .Summary }}
+			<meta property="og:description" content="{{ .Summary }}">
+			<meta name="twitter:card" content="{{ .Summary }}">
+		{{- end }}
+		<meta property="og:site_name" content="{{ .Site.Title }}">
+		<meta property="og:locale" content="{{ .Site.LanguageCode | default "en" }}">
+		{{ if isset .Site.Params "twitter" }}
+			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+		{{ else if isset .Site.Author "twitter" }}
+			<meta name="twitter:site" content="@{{ .Site.Author.twitter }}">
+		{{ end }}
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
