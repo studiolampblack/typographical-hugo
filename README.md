@@ -4,6 +4,54 @@
 
 This is a port of the [Tale theme for Jekyll](https://github.com/theramiyer/typographical) to Hugo based on [Tale theme for Hugo](https://github.com/EmielH/tale-hugo). Typographical is a typography-focused theme, based on Tale, which is a minimal Jekyll theme curated for storytellers. Checkout the demo of Tale [here](https://chesterhow.github.io/tale/), and a demo of Typographical [here](https://blog.ramiyer.me).
 
+## A quick look
+
+Here is a quick look at the theme.
+
+A post with **emphasis on the title**, **drop-cap** and first line in **small-caps** to ease into the paragraph. Custom FontAwesome icons in the top bar, configurable within config.toml.
+
+![A post with emphasis on the title, drop-cap and first line in small-caps to ease into the paragraph. Custom FontAwesome icons in the top bar, configurable within config.toml.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Hello-Hugo.png)
+
+**Table of contents** as required and Spotify embed.
+
+![Table of contents as required and Spotify embed.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods.png)
+
+**Embeddable charts**, support for raw HTML.
+
+![Embeddable charts, support for raw HTML.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods(1).png)
+
+**Related posts** and **share buttons** (Twitter gets hash tags based on post tags).
+
+![Related posts and share buttons (Twitter generates hash tags based on post tags).](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Archive(2).png)
+
+Embeddable **YouTube video** where you can specify start and end times to play a short clip.
+
+![Embeddable YouTube video where you can specify start and end times to play a short clip.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Time-to-rethink-print-media.png)
+
+Full UNICODE **character support** with diacritics.
+
+![Full UNICODE character support with diacritics.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Reading-the-IAST.png)
+
+**Small-caps** and **blockquote** that does not hit you with design, but stands out.
+
+![Small-caps and blockquote that does not hit you with design, but stands out.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-COVID-and-Credibility.png)
+
+Archive page with **quick jumps to year and month**.
+
+![Archive page with quick jumps to year and month.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Archive.png)
+
+Reverse-chronological **arrangement of posts by year and month**.
+
+![Reverse-chronological arrangement of posts by year and month.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Archive(1).png)
+
+**Instant search** within the archive page.
+
+![Instant search within the archive page.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Archive(2).png)
+
+**Tables** and block quotes that are **functional, and look good**.
+
+![Tables and block quotes that are functional, and look good.](https://s3.ap-south-1.amazonaws.com/blogimages.ramiyer.me/2020/Screenshot_2020-10-02-Transparency-on-ventilator.png)
+
 ## Installation
 
 ### 1. Install the theme
