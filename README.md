@@ -199,7 +199,7 @@ Thanks
 - to [Emiel Hollander](//github.com/EmielH) for creating the [Tale theme for Hugo](https://github.com/EmielH/tale-hugo),
 - to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
-- to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which I used some useful snippets of code.
+- to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which some useful snippets of code have been used.
 
 ## License
 See [LICENSE](https://github.com/theramiyer/typographical-hugo/blob/master/LICENSE).
