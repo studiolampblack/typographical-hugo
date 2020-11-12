@@ -30,19 +30,21 @@
 		{{ end -}}
 
 		<!-- Hyphenopoly -->
-		<script>
-			var Hyphenopoly = {
-				require: {
-					"en-gb": "Supercalifragilisticexpialidocious"
-				},
-				setup: {
-					selectors: {
-						"body": {}
+		{{ if .Site.Params.enableTypographicalHyphenation }}
+			<script>
+				var Hyphenopoly = {
+					require: {
+						"en-gb": "Supercalifragilisticexpialidocious"
+					},
+					setup: {
+						selectors: {
+							"body": {}
+						}
 					}
-				}
-			};
-		</script>
-		<script async src="/js/Hyphenopoly_Loader.js"></script>
+				};
+			</script>
+			<script async src="/js/Hyphenopoly_Loader.js"></script>
+		{{ end }}
 		
 		<!-- Social -->
 		<meta property="og:type" content="website">
