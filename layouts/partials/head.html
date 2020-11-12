@@ -29,8 +29,19 @@
 		{{- $cssTarget		:= "css/style.css" }}
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | toCSS $cssOptions }}
-  		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
-		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="/css/fonts.css">
+		<link rel="preload" href="/fonts/Alegreya-Regular.woff" as="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/Alegreya-Regular.woff2" as="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff" as="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff2" as="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/fa-brands-400.woff" as="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font/woff2" crossorigin>
+
+		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+		<noscript>
+			<link rel="stylesheet" href="/css/fonts.css">
+		</noscript>  
 
 		{{ range .Site.Params.css -}}
 			<link rel="stylesheet" href="{{ . | relURL }}">
