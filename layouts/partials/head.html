@@ -31,12 +31,12 @@
 		{{- $style			:= resources.Get "scss/typographical.scss" | toCSS $cssOptions }}
 		
 		<link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="/css/fonts.css">
-		<link rel="preload" href="/fonts/Alegreya-Regular.woff" as="font/woff" crossorigin>
-		<link rel="preload" href="/fonts/Alegreya-Regular.woff2" as="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff" as="font/woff" crossorigin>
-		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff2" as="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/fa-brands-400.woff" as="font/woff" crossorigin>
-		<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/Alegreya-Regular.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/Alegreya-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/AlegreyaSans-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/fa-brands-400.woff" as="font" type="font/woff" crossorigin>
+		<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
 
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 		<noscript>
