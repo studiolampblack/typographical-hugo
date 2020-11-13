@@ -2,4 +2,7 @@
 			<span>
 			&copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Author.name }}. {{ i18n "generator" | safeHTML }}
 			</span>
+			<span>
+				{{ if .Site.Params.PrivacyPolicyUrl }}<a href="{{ .Site.Params.PrivacyPolicyUrl }}">{{ i18n "privacy" }}</a>.{{ end }}
+			</span>
 		</footer>
