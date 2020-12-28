@@ -87,4 +87,7 @@
 		{{ if not (in (.Site.BaseURL | string) "localhost") }}
 			{{ template "_internal/google_analytics_async.html" . }}
 		{{ end }}
+
+		<!-- Plausible Analytics -->
+		{{ partial "plausible_head.html" . }}
 	</head>
