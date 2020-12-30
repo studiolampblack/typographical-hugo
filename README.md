@@ -226,6 +226,10 @@ This theme supports Plausible Analytics as an alternative to (or along with) Goo
 
 For more configuration options, check out the project Wiki.
 
+### Theme customisation
+
+The theme contains options to customise the font, enable or disable drop-caps, accent colour, contact form, etc. The Wiki contains more information on these options.
+
 ## Acknowledgments
 
 Thanks
