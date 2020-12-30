@@ -1,8 +1,14 @@
 		<footer>
 			<span>
-			&copy; <time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Author.name }}. {{ i18n "generator" | safeHTML }}
-			</span>
-			<span>
-				{{ if .Site.Params.PrivacyPolicyUrl }}<a href="{{ .Site.Params.PrivacyPolicyUrl }}">{{ i18n "privacy" }}</a>.{{ end }}
+				<p>
+					{{ .Site.Params.Copyright.Icon | default "&copy;" | safeHTML }}
+					{{ if .Site.Params.Copyright.Message }}
+						{{ .Site.Params.Copyright.Message | markdownify }}
+					{{ else }}
+						<time datetime="{{ now }}">{{ now.Format "2006" }}</time> {{ .Site.Author.name }}.
+					{{ end }}
+					<br />
+					{{ i18n "generator" | safeHTML }} {{ if .Site.Params.PrivacyPolicyUrl }}<a href="{{ .Site.Params.PrivacyPolicyUrl }}">{{ i18n "privacy" }}</a>.{{ end }}
+				</p>
 			</span>
 		</footer>
