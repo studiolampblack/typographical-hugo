@@ -1,9 +1,9 @@
 {{ if .Site.Params.ContactForm.Id }}
     <form id="contact-form" class="contact-form" method="post" action="https://formspree.io/f/{{ .Site.Params.ContactForm.Id }}" />
-        <input type="text" name="name" placeholder="{{ .Site.Params.ContactForm.NamePlaceholder | default "Your name" }}" />
-        <input type="email" name="email" placeholder=" {{ .Site.Params.ContactForm.EmailPlaceHolder | default "Your email" }}" />
-        <input type="text" name="_gotcha" class="gotcha" />
-        <textarea name="message" placeholder="{{ .Site.Params.ContactForm.MessagePlaceholder | default "Your message" }}"></textarea>
+        <input type="text" name="name" tabindex="1" placeholder="{{ .Site.Params.ContactForm.NamePlaceholder | default "Your name" }}" />
+        <input type="email" name="email" tabindex="2" placeholder="{{ .Site.Params.ContactForm.EmailPlaceHolder | default "Your email" }}" />
+        <textarea name="message" tabindex="3" placeholder="{{ .Site.Params.ContactForm.MessagePlaceholder | default "Your message" }}"></textarea>
+        <input type="text" tabindex="4" name="_gotcha" class="gotcha" />
         <input type="submit" value="{{ .Site.Params.ContactForm.Submit | default "Send" }}" />
     </form>
 {{ end }}
