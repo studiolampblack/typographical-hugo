@@ -345,3 +345,11 @@ hr {
        -moz-appearance:none;
   }
 }
+
+// OpenType typographical settings
+.post {
+  font-variant-numeric: $num-style;
+  code {
+    font-variant-numeric: lining-nums; // old-style numbers don't look good in code
+  }
+}
