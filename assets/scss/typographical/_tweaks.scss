@@ -353,3 +353,7 @@ hr {
     font-variant-numeric: lining-nums; // old-style numbers don't look good in code
   }
 }
+
+.nav-title {
+  text-transform: lowercase;
+}
