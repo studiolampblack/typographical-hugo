@@ -2,8 +2,8 @@
     <div class="tinyletter-subscription">
         <form action="https://tinyletter.com/{{ .Site.Params.TinyLetter.Id }}" method="post" target="popupwindow"
             onsubmit="window.open('https://tinyletter.com/{{ .Site.Params.TinyLetter.Id }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-            <p><label for="tlemail">{{ .Site.Params.TinyLetter.Text | default "Enter your email address" }}</label></p>
-            <p><input type="text" name="email" id="tlemail" placeholder="{{ with .Site.Params.TinyLetter.Text }}Enter your email address{{ end }}" /></p>
+            <p><label for="tlemail">{{ .Site.Params.TinyLetter.Text | default "Subscribe to our newsletter" }}</label></p>
+            <p><input type="text" name="email" id="tlemail" placeholder="Enter your email address" /></p>
             <input type="hidden" value="1" name="embed" />
             <input type="submit" value="Subscribe" />
             <p>Powered by <a href="https://tinyletter.com" target="_blank">TinyLetter</a></p>
