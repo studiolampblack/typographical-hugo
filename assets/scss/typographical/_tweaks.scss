@@ -348,7 +348,7 @@ hr {
 
 // OpenType typographical settings
 .post {
-  font-variant-numeric: $num-style;
+  font-variant-numeric: oldstyle-nums;
   code {
     font-variant-numeric: lining-nums; // old-style numbers don't look good in code
   }
