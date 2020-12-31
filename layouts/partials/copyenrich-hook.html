@@ -1,0 +1,36 @@
+<script src="/js/copyenrich/copyenrich.js"></script>
+<script src="/js/copyenrich/copyenrich-filter.js"></script>
+
+<script>
+  var copyenrich = {
+  filter_minlength: 30,
+
+  filter_wordmatch_enabled_signal_words: [],
+
+  filter_prefix : '',
+  filter_postfix : '',
+
+  filter_source_url: '\n\nSource: {{ .Title }} by {{ if .Params.Author }}{{ .Params.Author }}{{ else }}{{ .Site.Author.name }}{{ end }} | ',
+
+  filter_analytics_name: "Copy on page",
+  filter_analytics_value: "Content",
+
+  filter_wordmatch_ad_signal_words: [],
+  filter_wordmatch_ad: '\n\n' +
+  '*******************************************************\n' +
+  '* Plagiarism from our website is strictly illegal! *\n' +
+  '* Your IP-address is reported to us and DMCA is filed *\n' +
+  '*******************************************************\n'
+
+  };
+
+  // initialize
+  var copyenrichFilters = copyenrichFilters || [];
+
+  copyenrichFilters.push([ filter_minlength ]);
+  <!-- copyenrichFilters.push([ filter_wordmatch_enabled ]); -->
+  <!-- copyenrichFilters.push([ filter_wordmatch_ad ]); -->
+  copyenrichFilters.push([ filter_analytics ]);
+  copyenrichFilters.push([ filter_source_url ]);
+  copyenrichFilters.push([ filter_prefix_postfix ]);
+</script>

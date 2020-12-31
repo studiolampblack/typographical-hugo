@@ -12,3 +12,7 @@
 				</p>
 			</span>
 		</footer>
+		{{ if .Site.Params.EnableAutoAttribution }}
+			<!-- CopyEnrich -->
+			{{ partial "copyenrich-hook.html" . }}
+		{{ end }}
