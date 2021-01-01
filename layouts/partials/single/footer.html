@@ -1,6 +1,6 @@
-{{ if .Site.Params.PostFooter }}
-    <p>{{ .Site.Params.PostFooter | markdownify }}</p>
-{{ end }}
-{{ if .Site.Params.PostFooterHtml }}
-    {{ .Site.Params.PostFooterHtml | safeHTML }}
-{{ end }}
+{{- with .Site.Params.PostFooter }}
+    <p>{{ . | markdownify }}</p>
+{{- end }}
+    {{- with .Site.Params.PostFooterHtml }}
+{{ . | safeHTML }}
+{{- end }}
