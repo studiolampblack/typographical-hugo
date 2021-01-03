@@ -1,8 +1,7 @@
-{{ $appleEpisodeId := .Get 0 }}
 {{ $countryCode := .Site.Params.CountryId | default "us" }}
-{{ with .Site.Params.ApplePodcastsId }}
+{{ if .Site.Params.ApplePodcastsId }}
     <iframe
-        src="https://embed.podcasts.apple.com/{{ $countryCode }}/podcast/{{ . }}?i={{ $appleEpisodeId }}&amp;itsct=podcast_box&amp;itscg=30200&amp;theme=dark"
+        src="https://embed.podcasts.apple.com/{{ $countryCode }}/podcast/{{ .Site.Params.ApplePodcastsId }}?i={{ if .Page.Params.Episode.apple }}{{ .Page.Params.Episode.apple }}{{ else }}{{ .Get 0 }}{{ end }}&amp;itsct=podcast_box&amp;itscg=30200&amp;theme=dark"
         height="175px" frameborder="0"
         sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
         allow="autoplay *; encrypted-media *;"
