@@ -286,12 +286,12 @@ th {
   margin: 0 auto 1em auto !important;
 
   p {
-  line-height: 1.05em;
-}
+    line-height: 1.05em;
+  }
 
   a {
-  background: none;
-}
+    background: none;
+  }
 }
 
 .post figure > figcaption p {
@@ -371,6 +371,16 @@ hr {
   img {
     display: inline;
     margin: 0 0.5em;
+  }
+}
+
+.post {
+  figure {
+    margin: 0;
+  }
+  yt-container, img {
+    max-width: 125%;
+    margin-left: -12.5%;
   }
 }
 
