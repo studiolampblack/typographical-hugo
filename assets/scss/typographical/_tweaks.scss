@@ -357,6 +357,19 @@ hr {
   }
 }
 
+.podcast-badge {
+  text-align: center;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    display: inline;
+    margin: 0 0.5em;
+  }
+}
+
 // OpenType typographical settings
 .post {
   font-variant-numeric: oldstyle-nums;
