@@ -1,6 +1,5 @@
-{{ $type := .Get 0 | default "text" }}
-{{ with .Site.Params.EthicalAds.PublisherId }}
+{{ if .Site.Params.EthicalAds.PublisherId }}
     <div class="ethical-ads-container">
-        <div data-ea-publisher="{{ . }}" data-ea-type="{{ $type }}"></div>
+        <div class="{{ .Site.Params.EthicalAds.Class | default "flat horizontal" }}" data-ea-publisher="{{ .Site.Params.EthicalAds.PublisherId }}" data-ea-type="{{ .Get 0 | default "text" }}" {{ with .Get 1 }}id="{{ . }}"{{ end }} {{ with .Page.Params.Tags }}data-ea-keywords="{{ delimit . `|` }}"{{ end }}></div>
     </div>
 {{ end }}
