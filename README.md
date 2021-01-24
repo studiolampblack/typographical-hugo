@@ -230,6 +230,8 @@ For more configuration options, check out the project Wiki.
 
 The theme contains options to customise the font, enable or disable drop-caps, accent colour, contact form, etc. The Wiki contains more information on these options.
 
+For detailed customisation options, go to the project wiki.
+
 ## Acknowledgments
 
 Thanks
