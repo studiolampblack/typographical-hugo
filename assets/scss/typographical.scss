@@ -41,6 +41,7 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 {{ end }}
 
 // Import the rest
+@import 'typographical/fonts';
 @import 'typographical/variables';
 @import 'typographical/base';
 @import 'typographical/code';
@@ -51,3 +52,7 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 @import 'typographical/catalogue';
 @import 'typographical/tweaks';
 @import 'typographical/multipage';
+
+{{ if .Site.Params.EnableDevanagari }}
+@import 'typographical/devanagari';
+{{ end }}
