@@ -9,6 +9,14 @@
 
 		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 
+		<!-- Preload -->
+		{{ if (not .Site.Params.FontUrl) }}
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/alegreya-sans-800.woff2">
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/fa-solid-900.woff2">
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/fa-brands-400.woff2">
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/alegreya-regular.woff2">
+		{{ end }}
+
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
 		{{- $cssTarget		:= "css/style.css" }}
