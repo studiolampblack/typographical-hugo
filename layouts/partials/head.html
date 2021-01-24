@@ -14,12 +14,8 @@
 		{{- $cssTarget		:= "css/style.css" }}
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | resources.ExecuteAsTemplate "scss/typographical.scss" . | toCSS $cssOptions | minify | fingerprint }}
-
-		<link rel="preload" as="style" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
 		
 		<link href="{{ .Site.Params.FontUrl | default "" }}" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
 		{{ range .Site.Params.css -}}
