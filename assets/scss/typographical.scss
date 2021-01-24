@@ -40,8 +40,14 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
     }
 {{ end }}
 
+{{  if (not .Site.Params.FontUrl) }}
+    @import 'typographical/fonts';
+    {{ if .Site.Params.EnableDevanagari }}
+        @import 'typographical/devanagari';
+    {{ end }}
+{{ end }}
+
 // Import the rest
-@import 'typographical/fonts';
 @import 'typographical/variables';
 @import 'typographical/base';
 @import 'typographical/code';
@@ -56,7 +62,3 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 @import 'fontawesome/regular.scss';
 @import 'fontawesome/solid.scss';
 @import 'fontawesome/brands.scss';
-
-{{ if .Site.Params.EnableDevanagari }}
-@import 'typographical/devanagari';
-{{ end }}

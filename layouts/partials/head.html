@@ -15,7 +15,10 @@
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | resources.ExecuteAsTemplate "scss/typographical.scss" . | toCSS $cssOptions | minify | fingerprint }}
 		
-		<link href="{{ .Site.Params.FontUrl | default "" }}" rel="stylesheet">
+		{{ with .Site.Params.FontUrl }}
+			<link href="{{ . }}" rel="stylesheet">
+		{{ end }}
+
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
 		{{ range .Site.Params.css -}}
