@@ -9,6 +9,7 @@ $white: #fff;
 $blue: #4a9ae1;
 $shadow-color: rgba(0, 0, 0, .2);
 $base-font-size: 1.2rem;
+$fa-font-path: "/fonts";
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
