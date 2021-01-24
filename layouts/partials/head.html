@@ -17,13 +17,9 @@
 
 		<link rel="preload" as="style" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		{{ if .Site.Params.enableDevanagari }}
-			<link rel="preload" as="style" type="text/css" href="/css/fonts.css" onload="this.rel='stylesheet'">
-		{{ end }}
 		
-		<link href="{{ .Site.Params.FontUrl | default "https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans:wght@800&family=Alegreya:ital@0;1&display=swap" }}" rel="stylesheet">
+		<link href="{{ .Site.Params.FontUrl | default "" }}" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/fonts.css">
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
 		{{ range .Site.Params.css -}}
