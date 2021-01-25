@@ -29,6 +29,7 @@ footer,
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
+    text-transform: lowercase;
 
     &:hover,
     &:focus {
@@ -66,20 +67,6 @@ footer,
   }
 }
 
-@media (min-width: 37.5em) {
-  .nav {
-    &-container {
-      text-align: left;
-    }
-
-    ul {
-      bottom: 0;
-      position: absolute;
-      right: 0;
-    }
-  }
-}
-
 footer {
   font-family: $serif-secondary;
   padding: 2rem 0;
@@ -93,14 +80,54 @@ footer {
 
 .share-bar {
   text-align: center;
+  padding-bottom: 1.5em;
+
+  a {
+    margin: 0 0.15em;
+    color: $default-color;
+    font-size: 1.6em;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 
-.share-bar a {
-  margin: 0 0.15em;
-  color: $default-color;
-  font-size: 1.6em;
+::selection {
+  background-color: $accent-color;
 }
 
-.share-bar a:hover {
+footer, .share-bar, .nav-container { /* Disable selection of some elements */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.footer-icons {
+  color: $grey-2;
+  font-size: 3em;
+  margin-top: 0.2em;
+
+  .fas, .fab {
+    margin: 0 0.1em;
+  }
+}
+
+ul#results-container li, .catalogue ul li {
   color: $accent-color;
+  list-style-type: square;
+}
+
+p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
+  a {
+    outline: none;
+    transition: all .2s ease-out;
+    background: linear-gradient($accent-color, $accent-color);
+    background-size: 100% .2em;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0;
+  }
 }

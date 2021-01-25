@@ -36,19 +36,21 @@ h6 {
   color: $default-shade;
   font-family: $sans-serif;
   line-height: normal;
+  hyphens: none;
+  font-weight: 800;
+}
+
+p {
+  font-variant-numeric: oldstyle-nums;
 }
 
 a {
-  color: $blue;
-  text-decoration: none;
+  color: $default-color;
+  text-decoration: none !important;
 }
 
 blockquote {
   margin: 0 2.5em;
-
-  @media (max-width: 37.5em) {
-    margin: 0 0 0 2em;
-  }
 }
 
 img {
@@ -63,5 +65,39 @@ td {
 
 hr {
   border-top: solid 0.02em $grey-2;
+  color: transparent;
   margin-bottom: 1em;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1em;
+}
+
+th, td {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+th {
+  font-family: $sans-serif;
+  font-size: 1.1em;
+}
+
+code {
+  font-variant-numeric: lining-nums;
+}
+
+input, textarea {
+  font-family: $serif-primary;
+  font-size: 1em;
+  border: none;
+  padding: 0.2em 0.5em;
+  width: 100%;
+  resize: vertical;
+
+  &:focus {
+    outline: none;
+  }
 }
