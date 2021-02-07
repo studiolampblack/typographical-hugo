@@ -5,7 +5,7 @@ code {
 }
 
 code {
-  background-color: $grey-3;
+  @include theme('background-color',$grey-3);
   border-radius: 0.2em;
   color: $code-color;
   font-size: 0.75em;
@@ -36,7 +36,7 @@ pre code {
   }
 
   .lineno {
-    color: $default-tint;
+    @include theme('color',$default-tint);
     display: inline-block; // Ensures the null space also isn't selectable
     padding: 0 .75rem 0 .25rem;
     // Make sure numbers aren't selectable

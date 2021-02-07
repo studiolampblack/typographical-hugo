@@ -5,7 +5,7 @@
 
 html,
 body {
-  color: $default-color;
+  @include theme('color',$default-color);
   margin: 0;
   padding: 0;
 }
@@ -16,6 +16,8 @@ html {
   overflow-y: scroll;
 
   font-size: $base-font-size;
+
+  @include theme('background',$default-background);
 }
 
 body {
@@ -45,7 +47,7 @@ p {
 }
 
 a {
-  color: $default-color;
+  @include theme('color',$default-color);
   text-decoration: none !important;
 }
 
@@ -64,7 +66,8 @@ td {
 }
 
 hr {
-  border-top: solid 0.02em $grey-2;
+  border-top: solid 0.02em;
+  @include theme('border-color',$grey-2);
   color: transparent;
   margin-bottom: 1em;
 }

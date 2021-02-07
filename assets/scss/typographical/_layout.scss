@@ -103,7 +103,7 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
 }
 
 .footer-icons {
-  color: $grey-2;
+  @include theme('color',$grey-2);
   font-size: 3em;
   margin-top: 0.2em;
 

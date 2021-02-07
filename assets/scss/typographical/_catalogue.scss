@@ -1,6 +1,7 @@
 .catalogue {
   &-item {
-    border-bottom: 1px solid $grey-2;
+    border-bottom: 1px solid;
+    @include theme('border-color',$grey-2);
     display: inline-block;
     padding: 2rem 0;
 
@@ -19,7 +20,7 @@
   }
 
   &-time {
-    color: $default-tint;
+    @include theme('color',$default-tint);
     font-family: $serif-secondary;
     letter-spacing: 0.02em;
   }
