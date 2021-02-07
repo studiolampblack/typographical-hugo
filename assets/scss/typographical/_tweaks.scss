@@ -18,6 +18,13 @@
   }
 }
 
+@media (min-width: 64em) and (max-width: 80em) {
+  .sidenote {
+    margin-right: -23%;
+    width: 20%;
+  }
+}
+
 @media (max-width: 37.5em) {
   * {
     line-height: 1.45em;
@@ -64,5 +71,25 @@
         margin: 0 0.25em;
       }
     }
+  }
+}
+
+@media (max-width:64em) {
+  .sidenote {
+    display: none;
+
+    &-number::after {
+      @include accented-background;
+    }
+  }
+
+  .margin-toggle:checked + .sidenote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    position: relative;
   }
 }

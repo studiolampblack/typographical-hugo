@@ -123,11 +123,56 @@ ul#results-container li, .catalogue ul li {
 
 p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
   a {
-    outline: none;
-    transition: all .2s ease-out;
-    background: linear-gradient($accent-color, $accent-color);
-    background-size: 100% .2em;
-    background-repeat: no-repeat;
-    background-position: left 0 bottom 0;
+    @include accented-background
   }
+}
+
+.sidenote {
+  float: right;
+  clear: right;
+  margin-right: -35%;
+  width: 30%;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+  font-size: 0.8 * $base-font-size;
+  vertical-align: baseline;
+  position: relative;
+}
+
+.sidenote-number {
+  counter-increment: sidenote-counter;
+}
+
+
+.sidenote-number:after,
+.sidenote:before {
+    position: relative;
+    vertical-align: baseline;
+}
+
+.sidenote-number:after {
+    content: counter(sidenote-counter);
+    font-size: 0.7 * $base-font-size;
+    top: -0.5rem;
+    left: 0.1rem;
+}
+
+.sidenote:before {
+    content: counter(sidenote-counter) " ";
+    font-size: 0.7 * $base-font-size;
+    top: -0.5rem;
+}
+
+blockquote .sidenote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left;
+}
+
+label.sidenote-number {
+    display: inline;
+}
+
+input.margin-toggle {
+  display: none;
 }

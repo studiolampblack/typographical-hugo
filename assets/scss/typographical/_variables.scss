@@ -1,6 +1,7 @@
 // Colors
 $default-shade: #222;
 $default-color: #222;
+$default-background: #fff;
 $default-tint: #aaa;
 $grey-1: #979797;
 $grey-2: #e5e5e5;
@@ -23,6 +24,14 @@ $fa-font-path: "/fonts";
           transition: $args;
 }
 
+@mixin accented-background {
+  outline: none;
+  transition: all .2s ease-out;
+  background: linear-gradient($accent-color, $accent-color);
+  background-size: 100% .2em;
+  background-repeat: no-repeat;
+  background-position: left 0 bottom 0;
+}
 
 @mixin non-distracting-link {
   text-decoration: none;
