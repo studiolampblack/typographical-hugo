@@ -105,3 +105,8 @@
     }
   }
 }
+
+::selection {
+  background-color: $accent-color;
+  color: #222;
+}
