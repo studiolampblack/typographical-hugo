@@ -16,14 +16,14 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 
 // Small-caps
 {{ if .Site.Params.ScFont }}
-    .post > p:first-of-type::first-line {
+    .post-content > p:first-of-type::first-line {
         font-family: {{ .Site.Params.ScFont }};
     }
     .small-caps {
         font-family: {{ .Site.Params.ScFont }};
     }
 {{ else if .Site.Params.SerifFont }}
-    .post > p:first-of-type::first-line {
+    .post-content > p:first-of-type::first-line {
         font-family: {{ .Site.Params.SerifFont }};
         font-variant: small-caps;
     }
@@ -32,7 +32,7 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
         font-variant: small-caps;
     }
 {{ else }}
-    .post > p:first-of-type::first-line {
+    .post-content > p:first-of-type::first-line {
         font-family: "Alegreya SC";
     }
     .small-caps {
