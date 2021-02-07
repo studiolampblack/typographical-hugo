@@ -1,4 +1,4 @@
-<a href="{{ .Permalink }}" class="catalogue-item">
+<a href="{{ .Permalink | relURL }}" class="catalogue-item">
     <div>
         <time datetime="{{ .PublishDate }}" class="catalogue-time">{{ i18n "publishdate" . }}</time>{{ if .Site.Params.DisplayReadTime }}<span class="catalogue-time"> | {{ .ReadingTime }}&nbsp;minute read</span>{{ end }}
         <h1 class="catalogue-title">{{ .Title }}</h1>
