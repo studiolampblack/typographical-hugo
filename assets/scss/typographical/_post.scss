@@ -34,6 +34,10 @@
   p {
     margin: 0 0 1em;
     font-size: $base-font-size;
+
+    a {
+      @include non-distracting-link;
+    }
   }
 
   a:hover {
