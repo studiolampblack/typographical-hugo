@@ -25,7 +25,6 @@ footer,
 
   &-title {
     @include transition(all .2s ease-out);
-    color: $default-color;
     display: inline-block;
     margin: 0;
     padding-right: .2rem;
@@ -46,7 +45,6 @@ footer,
 
   li {
     @include transition(all .2s ease-out);
-    color: $default-color;
     display: inline-block;
     opacity: .6;
     padding: 0 1rem 0 0;
@@ -62,7 +60,6 @@ footer,
   }
 
   a {
-    color: $default-color;
     font-family: $sans-serif;
   }
 }
@@ -73,7 +70,6 @@ footer {
   text-align: center;
 
   span {
-    color: $default-color;
     font-size: .8rem;
   }
 }
@@ -84,10 +80,10 @@ footer {
 
   a {
     margin: 0 0.1em;
-    color: $default-color;
     font-size: 1.6em;
 
     &:hover {
+      @include transition(all .2s ease-out);
       color: $accent-color;
     }
   }
