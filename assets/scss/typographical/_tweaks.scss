@@ -57,7 +57,7 @@
         font-size: 1.3em;
 
         a {
-          color: $grey-1;
+          @include theme('color',$grey-1);
         }
       }
     }
@@ -92,4 +92,21 @@
     margin: 1rem 2.5%;
     position: relative;
   }
+}
+
+// Hacks
+.post-content {
+  a, .footnotes a {
+    @media (prefers-color-scheme: dark) {
+      @include non-distracting-link(#222, #ddd);
+    }
+    @media (prefers-color-scheme: light) {
+      @include non-distracting-link(#fff, #222);
+    }
+  }
+}
+
+::selection {
+  background-color: $accent-color;
+  color: #222;
 }

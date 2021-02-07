@@ -89,10 +89,6 @@ footer {
   }
 }
 
-::selection {
-  background-color: $accent-color;
-}
-
 footer, .share-bar, .nav-container { /* Disable selection of some elements */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -103,7 +99,7 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
 }
 
 .footer-icons {
-  color: $grey-2;
+  @include theme('color',$grey-2);
   font-size: 3em;
   margin-top: 0.2em;
 
