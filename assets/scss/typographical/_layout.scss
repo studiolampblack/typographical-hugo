@@ -115,7 +115,7 @@ ul#results-container li, .catalogue ul li {
 
 p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
   a {
-    @include accented-background
+    @include accented-background;
   }
 }
 
