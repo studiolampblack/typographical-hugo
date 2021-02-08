@@ -77,10 +77,6 @@
 @media (max-width:64em) {
   .sidenote {
     display: none;
-
-    &-number::after {
-      @include accented-background;
-    }
   }
 
   .margin-toggle:checked + .sidenote {
@@ -95,17 +91,6 @@
 }
 
 // Hacks
-.post-content {
-  p a, blockquote a, .footnotes a, li a {
-    @media (prefers-color-scheme: dark) {
-      @include non-distracting-link(#222, #ddd);
-    }
-    @media (prefers-color-scheme: light) {
-      @include non-distracting-link(#fff, #222);
-    }
-  }
-}
-
 ::selection {
   background-color: $accent-color;
   color: #222;

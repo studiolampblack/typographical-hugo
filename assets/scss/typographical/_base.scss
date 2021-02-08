@@ -48,7 +48,7 @@ p {
 
 a {
   @include theme('color',$default-color);
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 blockquote {
