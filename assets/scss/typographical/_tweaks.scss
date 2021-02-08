@@ -96,7 +96,7 @@
 
 // Hacks
 .post-content {
-  a, .footnotes a {
+  p a, blockquote a, .footnotes a, li a {
     @media (prefers-color-scheme: dark) {
       @include non-distracting-link(#222, #ddd);
     }
