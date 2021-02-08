@@ -154,6 +154,12 @@ p, footer, .post-list, .relatedposts {
     top: -0.5rem;
 }
 
+
+.sidenote-number:after, .sidenote:before, .footnote-ref {
+  text-decoration: none !important;
+  filter: contrast(0.4);
+}
+
 blockquote .sidenote {
     margin-right: -82%;
     min-width: 59%;
