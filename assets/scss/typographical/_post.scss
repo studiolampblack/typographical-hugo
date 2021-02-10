@@ -301,9 +301,18 @@
   }
 
   a {
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    @include theme('text-decoration-color', $grey-1);
     background: none;
+
+    &::after {
+      position: relative;
+      content: "\FEFF°";
+      font-size: 90%;
+      top: -0.10em;
+      color: $code-color;
+    }
+  }
+
+  #TableOfContents a::after {
+    display: none;
   }
 }
