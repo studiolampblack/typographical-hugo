@@ -134,9 +134,14 @@
   p {
     font-size: 1em;
   }
-
-  a:hover {
-    text-decoration: none;
+  
+  a {
+    &:after {
+      display: none;
+    }
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   img {
