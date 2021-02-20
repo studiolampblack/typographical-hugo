@@ -103,8 +103,10 @@
 			{{ template "_internal/google_analytics_async.html" . }}
 		{{ end }}
 
+		{{ if .Site.Params.Plausible }}
 		<!-- Plausible Analytics -->
 		{{ partial "plausible_head.html" . }}
+		{{ end }}
 		
 		<!-- For Hugo Generator -->
 		{{ hugo.Generator }}
