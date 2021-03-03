@@ -1,18 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ .Title }}</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/remark.css">
+        <title>{{ .Title }}</title>
+        {{ with .Site.Params.FontUrl }}
+            <link href="{{ . }}" rel="stylesheet">
+        {{ end }}
+        <style>
+            body {
+                font-family: {{ .Site.Params.SansSerifFont | default "Alegreya Sans"}}, Helvetica, Arial, sans-serif;
+                color: #bbb;
+                line-height: 1.8;
+                letter-spacing: 0.015em;
+            }
+            h1, h2, h3 {
+                font-variant: all-small-caps;
+                line-height: 1.2;
+                font-weight: 300;
+            }
+            p {
+                margin: 0;
+            }
+            a, .blue {
+                color: #3e92cc;
+                text-decoration: none;
+            }
+            .red, .remark-inline-code, strong {
+                color: #d7263d;
+            }
+            .align-bottom {
+                position: absolute;
+                bottom: 3em;
+            }
+            .small-caps {
+                font-variant: all-small-caps;
+            }
+            .remark-code,
+            .remark-inline-code {
+                font-family: {{ .Site.Params.MonospaceFont | default "Fira Mono"}}, Menlo, Consolas, monospace;
+                font-size: 0.9em;
+            }
+            .remark-code {
+                border-radius: 0.3em;
+            }
+            .remark-container {
+                background: #111;
+            }
+            body:-webkit-full-screen {
+                background: #111;
+            }
+            body:-moz-full-screen {
+                background: #111;
+            }
+            body:fullscreen {
+                background: #111;
+            }
+            .remark-slide-scaler {
+                box-shadow: 0 0 10px 1px #000;
+            }
+            .remark-slide-content {
+                background-color: #111;
+                font-size: 1.5em;
+            }
+        </style>
     </head>
     <body>
         <textarea id="source">
-{{- .RawContent -}}
+            {{- .RawContent -}}
         </textarea>
         <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
         <script>
             var slideshow = remark.create({
-                highlightStyle: 'tomorrow-night'
+                highlightStyle: 'atelier-forest-dark'
             })
         </script>
     </body>
