@@ -1,0 +1,5 @@
+$sans-serif: {{ .Site.Params.SansSerifFont | default "Alegreya Sans"}}, Helvetica, Arial, sans-serif;
+$monospaced: {{ .Site.Params.MonospaceFont | default "Fira Mono"}}, Menlo, Consolas, monospace;
+
+@import 'remark/fonts';
+@import 'remark/slideshow';
