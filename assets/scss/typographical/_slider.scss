@@ -121,8 +121,8 @@
     }
 
     &-beforePosition {
-        background: #222;
-        color: #fff;
+        @include theme('background',$default-color);
+        @include theme('color',$default-background);
         left: 0;
         pointer-events: none;
         border-radius: 0.2rem;
@@ -130,8 +130,8 @@
     }
 
     &-afterPosition {
-        background: #222;
-        color: #fff;
+        @include theme('background',$default-color);
+        @include theme('color',$default-background);
         right: 0;
         pointer-events: none;
         border-radius: 0.2rem;
@@ -146,29 +146,31 @@
         top: 50%;
         margin-left: -20px;
         margin-top: -21px;
-        border: 2px solid #fff;
+        border: 2px solid;
+        @include theme('border-color',$default-background);
+        @include theme('background-color',$default-background);
         border-radius: 1000px;
         z-index: 20;
         pointer-events: none;
-        box-shadow: 0 0 10px rgb(12, 12, 12);
+        //box-shadow: 0 0 10px rgba(12, 12, 12, 0.5);
 
         &::before {
             bottom: 50%;
             margin-bottom: 20px;
-            box-shadow: 0 0 10px rgb(12, 12, 12);
+            //box-shadow: 0 0 10px rgb(12, 12, 12);
         }
 
         &::after {
             top: 50%;
             margin-top: 20.5px;
-            box-shadow: 0 0 5px rgb(12, 12, 12);
+            //box-shadow: 0 0 10px rgb(12, 12, 12);
         }
 
         &::before, &::after {
             content: " ";
             display: block;
             width: 2px;
-            background: #fff;
+            @include theme('background-color',$default-background);
             height: 9999px;
             position: absolute;
             left: 50%;
@@ -214,13 +216,15 @@
     }
 
     &-left-arrow {
-        border-right: 6px solid #fff;
+        border-right: 6px solid;
+        @include theme('border-right-color',$default-color);
         left: 50%;
         margin-left: -17px;
     }
 
     &-right-arrow {
-        border-left: 6px solid #fff;
+        border-left: 6px solid;
+        @include theme('border-left-color',$default-color);
         right: 50%;
         margin-right: -17px;
     }
