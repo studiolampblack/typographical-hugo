@@ -44,6 +44,9 @@ $themes: (
 
   @media (prefers-color-scheme: dark) {
     @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+    img {
+      filter: brightness(0.6) contrast(1.3);
+    }
   }
 }
 
