@@ -21,27 +21,27 @@
     margin-bottom: 0.5em;
 }
 
-@media (min-width: 80em) {
+@media screen and (min-width: 80em) {
     .mainSection {
-        height: 60em;
+        height: 30em;
         flex-direction: row;
     }
 }
 
-@media (min-width: 64em) and (max-width: 80em) {
+@media screen and (min-width: 64em) and (max-width: 80em) {
     .mainSection {
         height: 32em;
         flex-direction: row;
     }
 }
 
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media screen and (min-width: 37.5em) and (max-width: 64em) {
     .mainSection {
         height: 24em;
     }
 }
 
-@media (max-width: 37.5em) {
+@media screen and (max-width: 37.5em) {
     .mainSection {
         height: 17em;
     }

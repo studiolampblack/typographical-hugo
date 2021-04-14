@@ -7,17 +7,17 @@
     <div class="mainSection">
         <div id="{{ anchorize (.Get 4) }}" class="bal-container">
             <div class="bal-after">
-                <img src="{{ .Get 0 }}">
+                <img src="{{ .Get 1 }}">
                 <div class="bal-afterPosition afterLabel">
-                    {{ .Get 2 | default "Before" }}
+                    {{ .Get 3 | default "Before" }}
                 </div>
             </div>
         
             <div class="bal-before">
                 <div class="bal-before-inset">
-                    <img src="{{ .Get 1 }}">
+                    <img src="{{ .Get 0 }}">
                     <div class="bal-beforePosition beforeLabel">
-                        {{ .Get 3 | default "After" }}
+                        {{ .Get 2 | default "After" }}
                     </div>
                 </div>
             </div>
