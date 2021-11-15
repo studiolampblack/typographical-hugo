@@ -322,3 +322,26 @@ abbr, .small-caps, .post-content > p:first-of-type::first-line {
     display: none;
   }
 }
+
+.amazon-affiliate {
+  a {
+    .fa-amazon {
+      @include theme('color',$grey-1);
+      font-size: 0.8em;
+    }
+    
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #f90;
+      border-radius: 0.2em;
+      padding: 0 0.3em;
+
+      .fa-amazon {
+        color: $base-color;
+      }
+    }
+  }
+}
