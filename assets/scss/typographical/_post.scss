@@ -115,6 +115,13 @@
   blockquote p, blockquote ul li, blockquote ol li {
     font-size: 0.9 * $base-font-size;
   }
+
+  &-footer {
+    margin: 2em 0;
+    p {
+      font-size: 0.95em;
+    }
+  }
 }
 
 .update-info {
