@@ -239,9 +239,10 @@
 
 .yt-container {
   position: relative;
-  width: 100%;
+  margin-left: -12.5%;
+  width: 125%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-bottom: 70.31%;
 }
 
 .yt-container, .spotify-container {
@@ -254,7 +255,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 0.4rem;
 }
 
 .search-bar {
