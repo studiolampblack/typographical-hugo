@@ -31,29 +31,6 @@
        url('/fonts/alegreya-sans-extrabold.woff') format('woff');
 }
 
-
-/* alegreya-sc-regular - latin-ext_latin */
-@font-face {
-  font-family: 'Alegreya SC';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(''),
-       url('/fonts/alegreya-sc-regular.woff2') format('woff2'),
-       url('/fonts/alegreya-sc-regular.woff') format('woff');
-}
-
-/* alegreya-sc-italic - latin-ext_latin */
-@font-face {
-  font-family: 'Alegreya SC';
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: local(''),
-       url('/fonts/alegreya-sc-italic.woff2') format('woff2'),
-       url('/fonts/alegreya-sc-italic.woff') format('woff');
-}
-
 @font-face {
   font-family: 'Fira mono';
   font-style: normal;
