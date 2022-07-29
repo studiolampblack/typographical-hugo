@@ -174,13 +174,6 @@
     text-align:center;
     max-width:20em;
   }
-  input[type="submit"] {
-    max-width:8em;
-    background-color: $accent-color;
-    border-radius:0.2em;
-    -webkit-appearance:none;
-       -moz-appearance:none;
-  }
 }
 
 .instagram-media {
@@ -229,18 +222,22 @@
   display: none;
 }
 
+input[type="submit"] {
+  max-width: 8em;
+  background-color: $accent-color;
+  border-radius: 0.2em;
+  color: $base-color;
+  /* Disable iOS and Mozilla button overrides*/
+  -webkit-appearance: none;
+     -moz-appearance: none;
+}
+
 .contact-form {
   margin-bottom: 2em;
 
   input[type="submit"] {
     display: block;
-    background: $accent-color;
-    max-width: 8em;
     margin: 0 auto;
-    border-radius: 0.15em;
-    /* Disable iOS and Mozilla button overrides*/
-    -webkit-appearance: none;
-      -moz-appearance: none;
   }
 }
 
