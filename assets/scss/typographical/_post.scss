@@ -128,6 +128,7 @@
   font-family: $monospaced;
   text-align: center;
   font-size: 0.8em;
+  font-variant-numeric: lining-nums;
   @include theme('color',$grey-1);
   
   a {
