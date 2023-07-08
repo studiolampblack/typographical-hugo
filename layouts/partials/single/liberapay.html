@@ -1,4 +1,10 @@
 {{- with .Site.Author.liberapay }}
-    <script src="https://liberapay.com/{{ . }}/widgets/button.js"></script>
-    <noscript><a href="https://liberapay.com/{{ . }}/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
+    <a href="https://liberapay.com/{{ .username }}/donate{{ if .currency }}?currency={{ .currency }}{{ end }}" target="_blank">
+        <div class="support-button">
+            <div class="liberapay-button">
+                <i class="fas fa-donate"></i>
+                Support my work
+            </div>
+        </div>
+    </a>
 {{- end }}

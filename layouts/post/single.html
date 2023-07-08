@@ -20,7 +20,11 @@
 			{{- $Content | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML -}}
 		</section>
 		<!-- End content -->
-		{{ partial "single/patreon.html" . }}
+		{{ if .Site.Author.patreon }}
+			{{ partial "single/patreon.html" . }}
+		{{ else }}
+			{{ partial "single/liberapay.html" . }}
+		{{ end }}
 		{{ partial "single/footer.html" . }}
 	</div>
 	{{ partial "single/share.html" . }}
