@@ -7,7 +7,7 @@ $code-background: {{ .Site.Params.CodeBackground | default "#272822" }};
 $serif-primary: {{ .Site.Params.SerifFont | default "Alegreya" }}, 'Times New Roman', Times, serif;
 $serif-secondary: {{ .Site.Params.SecondarySerifFont | default "Alegreya" }}, Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
 $sans-serif: {{ .Site.Params.SansSerifFont | default "Alegreya Sans"}}, Helvetica, Arial, sans-serif;
-$monospaced: {{ .Site.Params.MonospaceFont | default "Fira Mono"}}, Menlo, Consolas, monospace;
+$monospaced: {{ .Site.Params.MonospaceFont | default "Inconsolata"}}, Menlo, Consolas, monospace;
 
 // Drop caps
 $drop-cap-size: {{ .Site.Params.DropCap.FontSize | default "5.8em" }};
