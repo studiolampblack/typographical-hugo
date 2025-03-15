@@ -22,8 +22,10 @@
 		<!-- End content -->
 		{{ if .Site.Author.patreon }}
 			{{ partial "single/patreon.html" . }}
-		{{ else }}
+		{{ else if .Site.Author.liberapay }}
 			{{ partial "single/liberapay.html" . }}
+		{{ else if .Site.Author.razorpay }}
+			{{ partial "single/razorpay.html" . }}
 		{{ end }}
 		{{ partial "single/footer.html" . }}
 	</div>

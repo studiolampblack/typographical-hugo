@@ -1,0 +1,7 @@
+{{ with .Site.Author.razorpay }}
+<div class="razorpay-button">
+    <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="{{ . }}" async></script>
+    </form>
+</div>
+{{ end }}
