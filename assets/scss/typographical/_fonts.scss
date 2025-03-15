@@ -40,3 +40,39 @@
        url('/fonts/fira-mono-regular.woff2') format('woff2'),
        url('/fonts/fira-mono-regular.woff') format('woff');
 }
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inconsolata-regular.woff2') format('woff2'),
+       url('/fonts/inconsolata-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inconsolata-regular.woff2') format('woff2'),
+       url('/fonts/inconsolata-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inconsolata-bold.woff2') format('woff2'),
+       url('/fonts/inconsolata-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inconsolata-bold.woff2') format('woff2'),
+       url('/fonts/inconsolata-bold.woff') format('woff');
+}
