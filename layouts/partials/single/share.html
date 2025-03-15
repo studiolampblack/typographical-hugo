@@ -8,7 +8,7 @@
             <i class="fab fa-facebook-f"></i>
         </a>
 
-        <a href="https://twitter.com/intent/tweet?text={{ .Site.Title }} {{ .Title }}&url={{ .Permalink }}&hashtags={{ delimit .Params.Tags `,` }}"
+        <a href="https://twitter.com/intent/tweet?text={{ .Site.Title }} {{ .Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
             title="Share on Twitter" target="_blank">
             <i class="fab fa-twitter"></i>
         </a>
