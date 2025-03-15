@@ -154,7 +154,6 @@ p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, b
     content: counter(sidenote-counter);
     font-size: 0.7 * $base-font-size;
     top: -0.5rem;
-    left: 0.1rem;
 }
 
 .sidenote:before {
