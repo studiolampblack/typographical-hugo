@@ -1,7 +1,15 @@
-{{ $text := .Get 0 }}
-{{ $link := .Get 1 }}
+{{- $text := .Get 0 -}}
+{{- $affiliateParam := .Get 1 -}}
+{{- $link := "" -}}
+
+{{- if (findRE "^http" $affiliateParam) -}}
+    {{- $link = $affiliateParam -}}
+{{- else -}}
+    {{- $domain := .Site.Params.Amazon.Domain | default "amazon.in" -}}
+    {{- $trackingId := .Site.Params.Amazon.TrackingId | default "ramiyer08-21" -}}
+    {{- $link = printf "%s" $trackingId | printf "%s%s" "?tag=" | printf "%s%s" $affiliateParam | printf "%s%s" "/dp/" | printf "%s%s" $domain | printf "%s%s" "https://www." -}}
+{{- end -}}
 
 <span class="amazon-affiliate">
-    <a href="{{ $link }}" target="_blank">{{ $text | markdownify }}</a>
+    <a href="{{- $link -}}" target="_blank">{{- $text | markdownify -}}</a>
 </span>
-
