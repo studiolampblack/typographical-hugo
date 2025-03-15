@@ -3,19 +3,19 @@
 
 name = "Tale"
 license = "MIT"
-licenselink = "https://github.com/EmielH/tale-hugo/blob/master/LICENSE"
+licenselink = "https://github.com/theramiyer/typographical-hugo/blob/master/LICENSE"
 description = "A port of the Tale theme for Hugo. Tale is a minimal Jekyll theme curated for storytellers."
-homepage = "https://github.com/EmielH/tale-hugo"
+homepage = "https://github.com/theramiyer/typographical-hugo"
 tags = ["minimal", "clean", "responsive", "simple", "personal", "blog", "starter", "light", "typography"]
 features = ["pagination"]
-min_version = "0.50"
+min_version = "0.59"
 
 [author]
-  name = "Emiel Hollander"
-  homepage = "https://www.emielhollander.nl"
+  name = "Ram Iyer"
+  homepage = "https://ramiyer.me"
 
 # If porting an existing theme
 [original]
   name = "Chester How"
-  homepage = "https://github.com/chesterhow/tale"
-  repo = "https://github.com/chesterhow/tale"
+  homepage = "https://www.emielhollander.nl"
+  repo = "https://github.com/EmielH/tale-hugo"

@@ -1,10 +1,10 @@
 # Tale
 
-[![Build Status](https://travis-ci.com/EmielH/tale-hugo.svg?branch=master)](https://travis-ci.com/EmielH/tale-hugo)
+[![Build Status](https://travis-ci.com/theramiyer/typographical-hugo.svg?branch=master)](https://travis-ci.com/theramiyer/typographical-hugo)
 
-This is a port of the [Tale theme for Jekyll](https://github.com/chesterhow/tale) to Hugo. Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here](https://chesterhow.github.io/tale/). I did not design this theme; I only ported it from Jekyll to Hugo.
+This is a port of the [Tale theme for Jekyll](https://github.com/theramiyer/typographical) to Hugo. Tale is a minimal Jekyll theme curated for storytellers. Checkout the demo [here](https://theramiyer.github.io/typographical/). I did not design this theme; I only ported it from Jekyll to Hugo.
 
-![Tale screenshot](https://raw.githubusercontent.com/EmielH/tale-hugo/master/images/screenshot.png)
+![Tale screenshot](https://raw.githubusercontent.com/theramiyer/typographical-hugo/master/images/screenshot.png)
 
 ## Installation
 
@@ -13,13 +13,13 @@ This is a port of the [Tale theme for Jekyll](https://github.com/chesterhow/tale
 If your site is also under version control using git, the easiest way to install this theme is to add it as a submodule. If you have not created a git repo for your project yet, you need to run `git init` beforehand. Inside the folder of your Hugo site, run the following command.
 
 ```
-git submodule add https://github.com/EmielH/tale-hugo.git themes/tale
+git submodule add https://github.com/theramiyer/typographical-hugo.git themes/typographical
 ```
 
 Alternatively, you can clone the theme into your project.
 
 ```
-git clone https://github.com/EmielH/tale-hugo.git themes/tale
+git clone https://github.com/theramiyer/typographical-hugo.git themes/typographical
 ```
 
 ### 2. Configure Hugo
@@ -27,13 +27,13 @@ git clone https://github.com/EmielH/tale-hugo.git themes/tale
 Add the following line to `config.toml` to tell Hugo to use the theme.
 
 ```
-theme = "tale"
+theme = "typographical"
 ```
 
 Alternatively, you can tell Hugo to use the theme with the `server` command.
 
 ```
-hugo server -t tale
+hugo server -t typographical
 ```
 
 ### Additional information
@@ -152,9 +152,9 @@ css = ["custom.css", "custom2.css"]
 
 Thanks
 
-- to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
+- to [Chester How](//github.com/theramiyer) for creating the original [Tale theme for Jekyll](https://theramiyer.github.io/typographical/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
 - to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which I used some useful snippets of code.
 
 ## License
-See [LICENSE](https://github.com/EmielH/tale-hugo/blob/master/LICENSE).
+See [LICENSE](https://github.com/theramiyer/typographical-hugo/blob/master/LICENSE).
