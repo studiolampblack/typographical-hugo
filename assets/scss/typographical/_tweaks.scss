@@ -1,4 +1,4 @@
-p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td {
+p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
   a {
     color: $default-color;
     outline: none;
@@ -290,4 +290,8 @@ th {
 .post figure > figcaption p {
     text-align: center;
     font-size: 1em;
+}
+
+.twitter-tweet {
+  margin-bottom: 1em;
 }
