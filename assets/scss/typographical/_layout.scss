@@ -113,7 +113,7 @@ ul#results-container li, .catalogue ul li {
   list-style-type: square;
 }
 
-p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
+p, footer, .post-list, .relatedposts {
   a {
     @include accented-background;
   }

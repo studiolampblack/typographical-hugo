@@ -35,10 +35,6 @@
     font-size: $base-font-size;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
   img {
     margin: 0 auto 0.5rem -12.5%;
     max-width: 125%;
@@ -302,5 +298,12 @@
     &> p:first-of-type::first-line {
     text-transform: lowercase;
     letter-spacing: 0.01em;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    @include theme('text-decoration-color', $grey-1);
+    background: none;
   }
 }
