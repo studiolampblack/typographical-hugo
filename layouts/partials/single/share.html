@@ -7,17 +7,17 @@
                 <i class="fab fa-facebook-square"></i>
             </a>
     
-            <a href="https://twitter.com/intent/tweet?text={{ .Title }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
+            <a href="https://twitter.com/intent/tweet?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
                 title="Share on Twitter" target="_blank">
                 <i class="fab fa-twitter-square"></i>
             </a>
     
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}&source={{ .Site.Title }}"
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}&summary={{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}&source={{ .Site.Title }}"
                 title="Share on LinkedIn" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
     
-            <a href="whatsapp://send?text={{ .Title }} | {{ .Site.Title }} {{ .Permalink }}"
+            <a href="whatsapp://send?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }} {{ .Permalink }}"
                 data-action="share/whatsapp/share" title="Share using WhatsApp" target="_blank">
                 <i class="fab fa-whatsapp-square"></i>
             </a>
