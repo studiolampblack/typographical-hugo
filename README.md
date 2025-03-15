@@ -214,6 +214,18 @@ To enable support for Devanagari text using the Sahitya font add the following t
     enableDevanagari = true
 ```
 
+### Plausible Analytics
+
+This theme supports Plausible Analytics as an alternative to (or along with) Google Analytics. To enable and configure Plausible Analytics, add at least the following to your `config.toml` file:
+
+```toml
+[params.plausible]
+  enable = true  # Whether to enable plausible tracking
+  domain = "example.com"  # Plausible "domain" name/id in your dashboard
+```
+
+For more configuration options, check out the project Wiki.
+
 ## Acknowledgments
 
 Thanks
@@ -222,6 +234,7 @@ Thanks
 - to [Chester How](//github.com/chesterhow) for creating the original [Tale theme for Jekyll](https://chesterhow.github.io/tale/),
 - to [onedrawingperday](//github.com/onedrawingperday), [bep](//github.com/bep) and [digitalcraftsman](//github.com/digitalcraftsman) for their help in getting the theme working correctly with Hugo,
 - to [lucperkins](https://github.com/lucperkins) for the [Fresh theme](https://github.com/lucperkins/hugo-fresh) from which some useful snippets of code have been used.
+- to [divinerites](https://github.com/divinerites) for [plausible-hugo](https://github.com/divinerites/plausible-hugo) from where the Plausible Analytics partials have been gotten.
 
 ## License
 See [LICENSE](https://github.com/theramiyer/typographical-hugo/blob/master/LICENSE).
