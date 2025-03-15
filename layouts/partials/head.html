@@ -9,21 +9,24 @@
 
 		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 
+		<!-- Preload -->
+		{{ if (not .Site.Params.FontUrl) }}
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/alegreya-sans-800.woff2" crossorigin>
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/fa-solid-900.woff2" crossorigin>
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/fa-brands-400.woff2" crossorigin>
+			<link rel="preload" as="font" type="font/woff2" href="/fonts/alegreya-regular.woff2" crossorigin>
+		{{ end }}
+
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
 		{{- $cssTarget		:= "css/style.css" }}
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | resources.ExecuteAsTemplate "scss/typographical.scss" . | toCSS $cssOptions | minify | fingerprint }}
-
-		<link rel="preload" as="style" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		{{ if .Site.Params.enableDevanagari }}
-			<link rel="preload" as="style" type="text/css" href="/css/fonts.css" onload="this.rel='stylesheet'">
-		{{ end }}
 		
-		<link href="{{ .Site.Params.FontUrl | default "https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Alegreya+Sans:wght@800&family=Alegreya:ital@0;1&display=swap" }}" rel="stylesheet">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
-		<link rel="stylesheet" href="/css/fonts.css">
+		{{ with .Site.Params.FontUrl }}
+			<link href="{{ . }}" rel="stylesheet">
+		{{ end }}
+
 		<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" media="screen">
 
 		{{ range .Site.Params.css -}}
