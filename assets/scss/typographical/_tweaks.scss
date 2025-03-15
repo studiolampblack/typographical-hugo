@@ -27,6 +27,7 @@ input, textarea {
   border: none;
   padding: 0.2em 0.5em;
   width: 100%;
+  resize: vertical;
 }
 
 input:focus, textarea:focus {
@@ -312,4 +313,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 100%;
   margin-top: 2em;
+}
+
+.gotcha {
+  display: none;
 }
