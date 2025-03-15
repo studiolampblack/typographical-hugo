@@ -1,3 +1,10 @@
-<div class="yt-container">
-    <iframe src="//www.youtube-nocookie.com/embed/{{- if $.Page.Params.youtube }}{{ $.Page.Params.youtube }}{{- else }}{{ .Get 0}}{{- end }}?color=white&start={{ .Get 1}}&end={{ .Get 2 }}" frameborder="0" allowfullscreen class="video"></iframe>
-</div>
+{{ $ytpc := .Page.Site.Config.Privacy.YouTube }}
+{{ if not $ytpc.Disable }}
+    {{ $ytBaseUrl := "www.youtube.com" }}
+    {{ if $ytpc.PrivacyEnhanced }}
+        {{ $ytBaseUrl = "www.youtube-nocookie.com" }}
+    {{ end }}
+    <div class="yt-container">
+        <iframe src="//{{ $ytBaseUrl }}/embed/{{ if $.Page.Params.youtube }}{{ $.Page.Params.youtube }}{{ else }}{{ .Get 0}}{{ end }}?color=white&start={{ .Get 1}}&end={{ .Get 2 }}" frameborder="0" allowfullscreen class="video"></iframe>
+    </div>
+{{ end }}
