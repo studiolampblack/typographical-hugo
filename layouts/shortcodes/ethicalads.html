@@ -1,0 +1,6 @@
+{{ $type := .Get 0 | default "text" }}
+{{ with .Site.Params.EthicalAds.PublisherId }}
+    <div class="ethical-ads-container">
+        <div data-ea-publisher="{{ . }}" data-ea-type="{{ $type }}"></div>
+    </div>
+{{ end }}

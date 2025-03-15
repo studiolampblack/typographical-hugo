@@ -80,6 +80,11 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="{{ "images/favicon-16x16.png" | relURL }}">
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ "images/apple-touch-icon.png" | relURL }}">
 
+		<!-- EthicalAds -->
+		{{ if .Site.Params.EthicalAds.PublisherId }}
+			<script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+		{{ end }}
+
 		<!-- RSS -->
 		<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
