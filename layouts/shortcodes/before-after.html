@@ -1,0 +1,38 @@
+{{ $beforeImage := .Get 0 }}
+{{ $afterImage := .Get 1 }}
+{{ $beforeLabel := .Get 2 }}
+{{ $afterLabel := .Get 3 }}
+{{ $caption := .Get 4 }}
+<figure>
+    <div class="mainSection">
+        <div id="{{ anchorize (.Get 4) }}" class="bal-container">
+            <div class="bal-after">
+                <img src="{{ .Get 1 }}">
+                <div class="bal-afterPosition afterLabel">
+                    {{ .Get 3 | default "Before" }}
+                </div>
+            </div>
+        
+            <div class="bal-before">
+                <div class="bal-before-inset">
+                    <img src="{{ .Get 0 }}">
+                    <div class="bal-beforePosition beforeLabel">
+                        {{ .Get 2 | default "After" }}
+                    </div>
+                </div>
+            </div>
+        
+            <div class="bal-handle">
+                <span class=" handle-left-arrow"></span>
+                <span class="handle-right-arrow"></span>
+            </div>
+        </div>
+    </div>
+    <figcaption><p>{{ $caption }}</p></figcaption>
+</figure>
+<script src="/js/before-after/before-after.js"></script>
+<script>
+    new BeforeAfter({
+        id: '#{{ anchorize (.Get 4) }}'
+    });
+</script>

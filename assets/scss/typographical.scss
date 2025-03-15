@@ -30,3 +30,4 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 @import 'typographical/pagination';
 @import 'typographical/catalogue';
 @import 'typographical/tweaks';
+@import 'typographical/slider'
