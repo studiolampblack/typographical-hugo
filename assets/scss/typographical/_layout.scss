@@ -89,10 +89,6 @@ footer {
   }
 }
 
-::selection {
-  background-color: $accent-color;
-}
-
 footer, .share-bar, .nav-container { /* Disable selection of some elements */
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
