@@ -1,110 +1,22 @@
-p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td, blockquote {
-  a {
-    color: $default-color;
-    outline: none;
-    text-decoration: none !important;
-    transition: all .2s ease-out;
-    background: linear-gradient($accent-color, $accent-color);
-    background-size: 100% .2em;
-    background-repeat: no-repeat;
-    background-position: left 0 bottom 0;
+@media (min-width: 90em) {
+  html {
+    font-size: 1.2 * $base-font-size;
   }
 }
 
-#results-container a, .catalogue a {
-  color: $default-color;
-  text-decoration: none;
-}
+@media (min-width: 37.5em) {
+  .nav {
+    &-container {
+      text-align: left;
+    }
 
-ul#results-container li, .catalogue ul li {
-  color: $accent-color;
-  list-style-type: square;
-}
-
-input, textarea {
-  font-family: $serif-primary;
-  font-size: 1em;
-  border: none;
-  padding: 0.2em 0.5em;
-  width: 100%;
-  resize: vertical;
-}
-
-input:focus, textarea:focus {
-  outline: none;
-}
-
-.post-info a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.post-info a:hover {
-  text-decoration: none;
-}
-
-.post > p:first-of-type::first-line {
-  text-transform: lowercase;
-  letter-spacing: 0.01em;
-}
-
-.post .drop-cap {
-  font-size: $drop-cap-size;
-  float: left;
-  line-height: 1;
-  margin: $drop-cap-margins;
-}
-
-.page .post-title, .post .post-title, .catalogue-title {
-  text-transform: lowercase;
-  font-weight: 800;
-}
-
-.post > .post-subtitle {
-  font-size: $base-font-size;
-  font-family: $serif-primary;
-  font-style: italic;
-  font-weight: normal;
-  text-align: center;
-  margin-top: -1rem;
-  margin-bottom: 3rem;
-}
-
-.relatedposts ul li, .post ul li {
-  font-size: $base-font-size;
-  list-style-type: square;
-}
-
-#TableOfContents {
-  color: $accent-color;
-  li a {
-    background: none;
+    ul {
+      bottom: 0;
+      position: absolute;
+      right: 0;
+    }
   }
 }
-
-.relatedposts {
-  margin: 2.5em 0;
-}
-
-.footer-icons {
-  color: $grey-2;
-  font-size: 3em;
-  margin-top: 0.2em;
-}
-
-.footer-icons .fas, .footer-icons .fab {
-  margin: 0 0.1em;
-}
-
-.share-bar {
-  padding-bottom: 1.5em;
-}
-
-footer {
-  max-width: 36em;
-}
-
-// for those little screens
 
 @media (max-width: 37.5em) {
   * {
@@ -115,6 +27,19 @@ footer {
     font-size: 1.1 * $base-font-size;
   }
 
+  blockquote {
+    margin: 0 0 0 2em;
+  }
+
+  /* * {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+  } */
+
   .post-title {
     font-size: 2.5em;
   }
@@ -123,283 +48,30 @@ footer {
     font-size: $drop-cap-size-small;
   }
 
-  .nav-title {
-    font-size: 2em;
-    margin-top: 1em;
+  .nav {
+    &-title {
+      font-size: 2em;
+      margin-top: 1em;
+    }
+
+    &-container {
+      ul {
+        font-size: 1.3em;
+
+        a {
+          color: $grey-1;
+        }
+      }
+    }
   }
 
-  .nav-container ul {
-    font-size: 1.3em;
+  .share-bar {
+    .share-buttons {
+      font-size: 1.1em;
+
+      .fab {
+        margin-left: 0 0.1em !important;
+      }
+    }
   }
-
-  .nav-container ul a {
-    color: $grey-1;
-  }
-
-  .share-bar .share-buttons {
-    font-size: 1.1em;
-  }
-
-  .share-bar .share-buttons .fab {
-    margin: 0 0.1em;
-  }
-}
-
-::selection {
-  background-color: $accent-color;
-}
-
-footer, .share-bar, .nav-container { /* Disable selection of some elements */
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-}
-
-@media (max-width: 37.5em) {
-  * {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
-  }
-}
-
-.post blockquote p {
-  font-size: 0.9 * $base-font-size;
-}
-
-.post li {
-  font-size: $base-font-size;
-}
-
-.hidden {
-  display: none;
-}
-
-.small-caps {
-  letter-spacing: 0.01em;
-  text-transform: lowercase;
-}
-
-// for HiDPI screens
-
-@media (min-width: 90em) {
-  html {
-    font-size: 1.2 * $base-font-size;
-  }
-}
-
-// images
-
-.post {
-  figure {
-    margin: 0;
-  }
-  img {
-    max-width: 125%;
-    margin-left: -12.5%;
-  }
-}
-
-// sub-heading adjustments
-
-.post h2 {
-  font-size: 1.7em;
-}
-
-.post h3 {
-  font-size: 1.4em;
-}
-
-// footnote tweaks
-
-.post > .footnotes {
-  // border-top: solid 1px $grey-2;
-
-  ol li, ol li p {
-    font-size: 0.9 * $base-font-size;
-  }
-
-  .reversefootnote {
-    background: none;
-  }
-}
-
-.contact-form {
-  margin-bottom: 2em;
-}
-
-.contact-form input[type="submit"] {
-  display: block;
-  background: $accent-color;
-  max-width: 8em;
-  margin: 0 auto;
-  border-radius: 0.15em;
-  /* Disable iOS and Mozilla button overrides*/
-  -webkit-appearance: none;
-     -moz-appearance: none;
-}
-
-table {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1em;
-}
-
-.yt-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-
-.yt-container, .spotify-container {
-  margin-bottom: 1em;
-}
-
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0.4rem;
-}
-
-th, td {
-  padding-left: 0.3em;
-  padding-right: 0.3em;
-}
-
-th {
-  font-family: $sans-serif;
-  font-size: 1.1em;
-}
-
-.search-bar {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-.archive-month {
-  margin-left: 0.67em;
-}
-
-.archive-post-title {
-  margin-left: 2em;
-}
-
-.instagram-media {
-  margin: 0 auto 1em auto !important;
-
-  p {
-    line-height: 1.05em;
-  }
-
-  a {
-    background: none;
-  }
-}
-
-.post figure > figcaption p {
-    text-align: center;
-    font-size: 1em;
-}
-
-.twitter-tweet {
-  margin-bottom: 1em;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  hyphens: none;
-  font-weight: 800;
-}
-
-.support-button {
-  text-align: center;
-  width: 100%;
-  margin-top: 2em;
-}
-
-.gotcha {
-  display: none;
-}
-
-.footnote-backref {
-  display: none;
-}
-
-hr {
-  color: transparent;
-}
-
-.tinyletter-subscription {
-  font-size:0.9rem;
-  form {
-    padding:0.5em;
-    text-align:center;
-  }
-  input[type="text"] {
-    text-align:center;
-    max-width:20em;
-  }
-  input[type="submit"] {
-    max-width:8em;
-    background-color: $accent-color;
-    border-radius:0.2em;
-    -webkit-appearance:none;
-       -moz-appearance:none;
-  }
-}
-
-.update-info {
-  font-family: $monospaced;
-  text-align: center;
-  font-size: 0.8em;
-  color: $grey-1;
-  
-  a {
-    background: none;
-  }
-}
-
-.podcast-badge {
-  text-align: center;
-  margin-bottom: 1em;
-
-  p {
-    font-size: 1em;
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  img {
-    max-width: 100%;
-    margin: 0;
-    display: inline;
-    margin: 0 0.5em;
-  }
-}
-
-.ethical-ads-container {
-  text-align: center;
-}
-
-// OpenType typographical settings
-.post {
-  font-variant-numeric: oldstyle-nums;
-  code {
-    font-variant-numeric: lining-nums; // old-style numbers don't look good in code
-  }
-}
-
-.nav-title {
-  text-transform: lowercase;
 }
