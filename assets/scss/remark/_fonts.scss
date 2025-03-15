@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/alegreya-light.woff2') format('woff2'),
+        url('/fonts/alegreya-light.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/alegreya-regular.woff2') format('woff2'),
+        url('/fonts/alegreya-regular.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/alegreya-italic.woff2') format('woff2'),
+        url('/fonts/alegreya-italic.woff') format('woff'),
+}
+
+@font-face {
+    font-family: 'Fira mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''),
+        url('/fonts/fira-mono-regular.woff2') format('woff2'),
+        url('/fonts/fira-mono-regular.woff') format('woff');
+}
