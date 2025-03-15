@@ -11,12 +11,12 @@ p, footer, .post-list, .relatedposts, .support, .footnote, .post li, .post td {
   }
 }
 
-#results-container a {
+#results-container a, .catalogue a {
   color: $default-color;
   text-decoration: none;
 }
 
-ul#results-container li {
+ul#results-container li, .catalogue ul li {
   color: $accent-color;
   list-style-type: square;
 }
