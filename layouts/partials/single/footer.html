@@ -1,5 +1,6 @@
-<!-- 
-This is a placeholder partial for the post footer. Create a file called
-layouts/partials/single/footer.html in your own site to overwrite this
-placeholder.
--->
+{{ if .Site.Params.PostFooter }}
+    <p>{{ .Site.Params.PostFooter | markdownify }}</p>
+{{ end }}
+{{ if .Site.Params.PostFooterHtml }}
+    {{ .Site.Params.PostFooterHtml | safeHTML }}
+{{ end }}
