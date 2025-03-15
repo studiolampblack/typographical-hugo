@@ -10,7 +10,7 @@
   filter_prefix : '',
   filter_postfix : '',
 
-  filter_source_url: '\n\nSource: {{ .Title }} by {{ if .Params.Author }}{{ .Params.Author }}{{ else }}{{ .Site.Author.name }}{{ end }} | ',
+  filter_source_url: '\n\nSource: {{ .Title }} by {{ if .Params.Author }}{{ .Params.Author }}{{ else }}{{ .Site.Params.Author.name }}{{ end }} | ',
 
   filter_analytics_name: "Copy on page",
   filter_analytics_value: "Content",

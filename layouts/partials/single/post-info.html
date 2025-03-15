@@ -3,10 +3,10 @@
     {{- if .Params.Author }}
         {{ .Params.Author }}
     {{- else }}
-        {{- if .Site.Author.url }}
-            <a href="{{ .Site.Author.url }}">{{ .Site.Author.name }}</a>
+        {{- if .Site.Params.Author.url }}
+            <a href="{{ .Site.Params.Author.url }}">{{ .Site.Params.Author.name }}</a>
         {{- else }}
-            {{ .Site.Author.name }}
+            {{ .Site.Params.Author.name }}
         {{- end }}
     {{- end }}
 
