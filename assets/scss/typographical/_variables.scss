@@ -1,13 +1,53 @@
+// Themes
+$dark-theme: "dark-theme";
+$light-theme: "light-theme";
+
+$default-color: "default-color";
+$default-background: "default-background";
+$default-tint: "default-tint";
+$grey-1: "grey-1";
+$grey-2: "grey-2";
+$grey-3: "grey-3";
+
+$themes: (
+  $light-theme: (
+    $default-color: #222,
+    $default-background: #fff,
+    $default-tint: #aaa,
+    $grey-1: #979797,
+    $grey-2: #e5e5e5,
+    $grey-3: #f9f9f9,
+  ),
+  $dark-theme: (
+    $default-color: #ddd,
+    $default-background: #222,
+    $default-tint: #555,
+    $grey-1: #686868,
+    $grey-2: #1a1a1a,
+    $grey-3: #060606,
+  )
+);
+
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
+  }
+}
+
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+  
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}
+
 // Colors
-$default-shade: #222;
-$default-color: #222;
-$default-background: #fff;
-$default-tint: #aaa;
-$grey-1: #979797;
-$grey-2: #e5e5e5;
-$grey-3: #f9f9f9;
-$white: #fff;
-$blue: #4a9ae1;
 $shadow-color: rgba(0, 0, 0, .2);
 $base-font-size: 1.2rem;
 $fa-font-path: "/fonts";
@@ -33,12 +73,9 @@ $fa-font-path: "/fonts";
   background-position: left 0 bottom 0;
 }
 
-@mixin non-distracting-link {
+@mixin non-distracting-link ($default-background, $default-color) {
   text-decoration: none;
-  background: -webkit-linear-gradient($default-background, $default-background), -webkit-linear-gradient($default-background, $default-background), -webkit-linear-gradient($default-color, $default-color);
   background: linear-gradient($default-background, $default-background), linear-gradient($default-background, $default-background), linear-gradient($default-color, $default-color);
-  -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
   background-repeat: no-repeat, no-repeat, repeat-x;
   text-shadow: 0.03em 0 $default-background, -0.03em 0 $default-background, 0 0.03em $default-background, 0 -0.03em $default-background, 0.06em 0 $default-background, -0.06em 0 $default-background, 0.09em 0 $default-background, -0.09em 0 $default-background, 0.12em 0 $default-background, -0.12em 0 $default-background, 0.15em 0 $default-background, -0.15em 0 $default-background;

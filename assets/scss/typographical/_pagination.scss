@@ -1,12 +1,12 @@
 .pagination {
-  border-top: .5px solid $grey-2;
+  border-top: .5px solid;
+  @include theme('border-color',$grey-2);
   font-family: $serif-secondary;
   padding-top: 2rem;
   position: relative;
   text-align: center;
 
   span {
-    color: $default-shade;
     font-size: 1.1rem;
   }
 
