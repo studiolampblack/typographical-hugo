@@ -17,7 +17,7 @@
 			{{- $firstParagraphNew := (replaceRE $regexPatternDropCap $regexReplacementDropCap $firstParagraphOld) -}}
 			{{- $Content = replace $Content $firstParagraphOld $firstParagraphNew -}}
 			{{- end }}
-			{{- $Content | safeHTML -}}
+			{{- $Content | replaceRE "\\b([A-Z][A-Z0-9]{2,})\\b" "<abbr>$1</abbr>" | safeHTML -}}
 		</section>
 		<!-- End content -->
 		{{ partial "single/patreon.html" . }}

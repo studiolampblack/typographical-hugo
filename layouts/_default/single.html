@@ -8,7 +8,7 @@
 
         {{ $footnoteReturnLink := (printf "${1}%s${2}" "↥") }}
         
-        {{ .Content | replaceRE "(<a (?:.*) class=\"footnote-backref\" (?:.*)>)(?:.*)(</a>)" $footnoteReturnLink | safeHTML }}
+        {{ .Content | replaceRE "\\b([A-Z][A-Z0-9]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}
     </div>
 </main>
 
