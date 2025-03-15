@@ -12,3 +12,6 @@ other = "{{ .PublishDate.Format \"January 2, 2006\" }}"
 
 [privacy]
 other = "Privacy Policy"
+
+[lastUpdated]
+other = "Last updated"

@@ -1,1 +1,2 @@
-{{ if .GitInfo }}<p class="post-info">Last updated {{ .GitInfo.AuthorDate.Format "January 2, 2006" }} through {{ if .Site.Params.commitUrl }}<a target="_blank" href="{{ .Site.Params.commitUrl }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>{{ else }}{{ .GitInfo.AbbreviatedHash }}{{ end }}</p>{{ end }}
+{{ $commitUrl := .Site.Params.CommitUrl }}
+{{ with .GitInfo }}<p class="post-info">{{ i18n "lastUpdated" }} {{ i18n "on" }} {{ .AuthorDate.Format "January 02, 2006" }} | {{ .Subject }}{{ if $commitUrl }} (<a target="_blank" href="{{ $commitUrl }}/{{ .Hash }}">{{ .AbbreviatedHash }}</a>){{ end }}</p>{{ end }}

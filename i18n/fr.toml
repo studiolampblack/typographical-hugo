@@ -12,3 +12,6 @@ other = "{{ .PublishDate.Day }} {{ index $.Site.Data.months_fr (printf \"%d\" .P
 
 [privacy]
 other = "Politique de confidentialité"
+
+[lastUpdated]
+other = "dernière mise à jour"
