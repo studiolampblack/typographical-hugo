@@ -34,10 +34,6 @@
   p {
     margin: 0 0 1em;
     font-size: $base-font-size;
-
-    a {
-      @include non-distracting-link;
-    }
   }
 
   a:hover {
@@ -306,5 +302,9 @@
     &> p:first-of-type::first-line {
     text-transform: lowercase;
     letter-spacing: 0.01em;
+  }
+
+  a, .footnotes a {
+    @include non-distracting-link;
   }
 }
