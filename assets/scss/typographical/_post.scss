@@ -112,7 +112,7 @@
     }
   }
 
-  blockquote p {
+  blockquote p, blockquote ul li, blockquote ol li {
     font-size: 0.9 * $base-font-size;
   }
 }
