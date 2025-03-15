@@ -93,3 +93,15 @@
     position: relative;
   }
 }
+
+// Hacks
+.post-content {
+  a, .footnotes a {
+    @media (prefers-color-scheme: dark) {
+      @include non-distracting-link(#222, #ddd);
+    }
+    @media (prefers-color-scheme: light) {
+      @include non-distracting-link(#fff, #222);
+    }
+  }
+}
