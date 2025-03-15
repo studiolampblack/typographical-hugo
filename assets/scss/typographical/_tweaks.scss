@@ -194,6 +194,18 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
   }
 }
 
+// images
+
+.post {
+  figure {
+    margin: 0;
+  }
+  img {
+    max-width: 125%;
+    margin-left: -12.5%;
+  }
+}
+
 // sub-heading adjustments
 
 .post h2 {
@@ -369,18 +381,10 @@ hr {
   }
 
   img {
+    max-width: 100%;
+    margin: 0;
     display: inline;
     margin: 0 0.5em;
-  }
-}
-
-.post {
-  figure {
-    margin: 0;
-  }
-  yt-container, img {
-    max-width: 125%;
-    margin-left: -12.5%;
   }
 }
 
