@@ -1,35 +1,38 @@
+/* https://coolors.co/0a2463-3e92cc-fffaff-d8315b-1e1b18 */
 body {
-  font-family: source-serif-pro;
-  color: #ddd;
-  line-height: 1.7;
+  font-family: source-sans-pro;
+  color: #bbb;
+  line-height: 2;
+  letter-spacing: 0.015em;
 }
 h1,
 h2,
 h3 {
   font-family: source-sans-pro;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.015em;
   font-weight: 300;
   line-height: 1.3;
 }
-h1 {
-  padding: 0 0.5em;
-  border-left: solid 0.05em #ffd900;
-}
-h2, h3 {
-  color: #ffd900;
-}
 a {
-  color: #2df;
+  color: #3e92cc;
   text-decoration: none;
 }
-.red, strong {
-  color: #f92672;
+.align-bottom {
+  position: absolute;
+  bottom: 3em;
+}
+.smallcaps {
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+.red, .remark-inline-code, strong {
+  color: #d8315b;
 }
 .remark-code,
 .remark-inline-code {
   font-family: source-code-pro;
-}
-.remark-inline-code {
-  color: #f92672;
 }
 html.remark-container,
 body.remark-container {
@@ -38,7 +41,7 @@ body.remark-container {
   -webkit-print-color-adjust: exact;
 }
 .remark-container {
-  background: #28272d;
+  background: #222;
   margin: 0;
   overflow: hidden;
 }
@@ -80,9 +83,9 @@ body:fullscreen {
   -ms-transform-origin: top left;
   -o-transform-origin: top left;
   transform-origin: top-left;
-  -moz-box-shadow: 0 0 30px #222;
-  -webkit-box-shadow: 0 0 30px #222;
-  box-shadow: 0 0 30px #222;
+  -moz-box-shadow: 0 0 30px #111;
+  -webkit-box-shadow: 0 0 30px #111;
+  box-shadow: 0 0 30px #111;
 }
 .remark-slide {
   height: 100%;
