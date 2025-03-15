@@ -3,9 +3,6 @@ $code-color: {{ .Site.Params.CodeColour | default "#bf616a"}};
 $accent-color: {{ .Site.Params.AccentColour | default "#ffd900"}};
 $code-background: {{ .Site.Params.CodeBackground | default "#272822" }};
 
-// Typographical options
-$num-style: {{ .Site.Params.Typography.NumberVariant | default "oldstyle-nums" }};
-
 // Fonts
 $serif-primary: {{ .Site.Params.SerifFont | default "Alegreya" }}, 'Times New Roman', Times, serif;
 $serif-secondary: {{ .Site.Params.SecondarySerifFont | default "Alegreya" }}, Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
