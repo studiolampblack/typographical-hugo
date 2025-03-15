@@ -23,6 +23,7 @@
 	</div>
 	{{ partial "single/share.html" . }}
 	{{ partial "single/related.html" . }}
+	{{ partial "single/tinyletter.html" . }}
 	{{- if .Params.Tags }}
 		<div class="hidden">{{ delimit .Params.Tags ", " }}</div>
 	{{- end }}
