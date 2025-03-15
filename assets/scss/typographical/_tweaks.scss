@@ -48,11 +48,11 @@ input:focus, textarea:focus {
   letter-spacing: 0.01em;
 }
 
-.post > p:first-of-type::first-letter {
+.post .drop-cap {
   font-size: 5.8em;
   float: left;
   line-height: 1;
-  margin: 0.095em 0.02em -0.1em -0.07em;
+  margin: -0.09em 0.03em -0.1em -0.05em;
 }
 
 .page .post-title, .post .post-title, .catalogue-title {
