@@ -9,21 +9,6 @@
 
 		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 
-		<!-- Hyphenopoly -->
-		<script>
-			var Hyphenopoly = {
-				require: {
-					"en-gb": "Supercalifragilisticexpialidocious"
-				},
-				setup: {
-					selectors: {
-						"body": {}
-					}
-				}
-			};
-		</script>
-		<script async src="/js/Hyphenopoly_Loader.js"></script>
-
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
 		{{- $cssTarget		:= "css/style.css" }}
@@ -48,6 +33,21 @@
 			<link rel="stylesheet" href="{{ . | relURL }}">
 		{{ end -}}
 
+		<!-- Hyphenopoly -->
+		<script>
+			var Hyphenopoly = {
+				require: {
+					"en-gb": "Supercalifragilisticexpialidocious"
+				},
+				setup: {
+					selectors: {
+						"body": {}
+					}
+				}
+			};
+		</script>
+		<script async src="/js/Hyphenopoly_Loader.js"></script>
+		
 		<!-- Social -->
 		<meta property="og:type" content="website">
 		<meta property="og:url" content="{{ .Permalink }}">
