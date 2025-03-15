@@ -1,0 +1,8 @@
+{{ if .Site.Params.RazorpayId }}
+    <div class="support-button">
+        <form>
+            <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                data-payment_button_id="{{ .Site.Params.RazorpayId }}"> </script>
+        </form>
+    </div>
+{{ end }}

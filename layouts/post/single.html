@@ -17,6 +17,8 @@
 		{{- $Content | safeHTML -}}
 		<!-- End content -->
 
+		{{ partial "single/razorpay.html" . }}
+
 		{{ partial "single/footer.html" . }}
 	</div>
 	{{ partial "single/share.html" . }}
