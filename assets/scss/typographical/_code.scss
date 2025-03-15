@@ -2,8 +2,6 @@ pre,
 code {
   font-family: $monospaced;
   font-variant-numeric: lining-nums;
-  hyphens: none;
-  word-break: break-all;
 }
 
 code {
@@ -12,6 +10,8 @@ code {
   color: $code-color;
   font-size: 0.75em;
   padding: .25em .5em;
+  hyphens: none;
+  word-break: break-all;
 }
 
 pre {
