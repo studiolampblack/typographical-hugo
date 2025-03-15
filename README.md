@@ -8,47 +8,47 @@ Here is a quick look at the theme.
 
 A post with **emphasis on the title**, **drop-cap** and first line in **small-caps** to ease into the paragraph. Custom FontAwesome icons in the top bar, configurable within config.toml.
 
-![A post with emphasis on the title, drop-cap and first line in small-caps to ease into the paragraph. Custom FontAwesome icons in the top bar, configurable within config.toml.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Hello-Hugo.png)
+![A post with emphasis on the title, drop-cap and first line in small-caps to ease into the paragraph. Custom FontAwesome icons in the top bar, configurable within config.toml.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Hello-Hugo.png)
 
 **Table of contents** as required and Spotify embed.
 
-![Table of contents as required and Spotify embed.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods.png)
+![Table of contents as required and Spotify embed.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods.png)
 
 **Embeddable charts**, support for raw HTML.
 
-![Embeddable charts, support for raw HTML.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods(1).png)
+![Embeddable charts, support for raw HTML.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods(1).png)
 
 **Related posts** and **share buttons** (Twitter gets hash tags based on post tags).
 
-![Related posts and share buttons (Twitter generates hash tags based on post tags).](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
+![Related posts and share buttons (Twitter generates hash tags based on post tags).](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
 
 Embeddable **YouTube video** where you can specify start and end times to play a short clip.
 
-![Embeddable YouTube video where you can specify start and end times to play a short clip.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Time-to-rethink-print-media.png)
+![Embeddable YouTube video where you can specify start and end times to play a short clip.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Time-to-rethink-print-media.png)
 
 Full UNICODE **character support** with diacritics.
 
-![Full UNICODE character support with diacritics.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Reading-the-IAST.png)
+![Full UNICODE character support with diacritics.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Reading-the-IAST.png)
 
 **Small-caps** and **blockquote** that does not hit you with design, but stands out.
 
-![Small-caps and blockquote that does not hit you with design, but stands out.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-COVID-and-Credibility.png)
+![Small-caps and blockquote that does not hit you with design, but stands out.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-COVID-and-Credibility.png)
 
 Archive page with **quick jumps to year and month**.
 
-![Archive page with quick jumps to year and month.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive.png)
+![Archive page with quick jumps to year and month.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive.png)
 
 Reverse-chronological **arrangement of posts by year and month**.
 
-![Reverse-chronological arrangement of posts by year and month.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(1).png)
+![Reverse-chronological arrangement of posts by year and month.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(1).png)
 
 **Instant search** within the archive page.
 
-![Instant search within the archive page.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
+![Instant search within the archive page.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
 
 **Tables** and block quotes that are **functional, and look good**.
 
-![Tables and block quotes that are functional, and look good.](http://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Transparency-on-ventilator.png)
+![Tables and block quotes that are functional, and look good.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Transparency-on-ventilator.png)
 
 ## Installation
 
