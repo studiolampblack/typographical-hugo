@@ -218,11 +218,6 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
   }
 }
 
-.post-info time::before {
-  content: "on ";
-  font-style: italic;
-}
-
 .contact-form {
   margin-bottom: 2em;
 }
