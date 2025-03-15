@@ -14,32 +14,6 @@ $drop-cap-size: {{ .Site.Params.DropCap.FontSize | default "5.8em" }};
 $drop-cap-size-small: {{ .Site.Params.DropCap.SmallScreenFontSize | default "5.2em" }};
 $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.1em -0.05em" }};
 
-// Small-caps
-{{ if .Site.Params.ScFont }}
-    .post-content > p:first-of-type::first-line {
-        font-family: {{ .Site.Params.ScFont }};
-    }
-    .small-caps {
-        font-family: {{ .Site.Params.ScFont }};
-    }
-{{ else if .Site.Params.SerifFont }}
-    .post-content > p:first-of-type::first-line {
-        font-family: {{ .Site.Params.SerifFont }};
-        font-variant: small-caps;
-    }
-    .small-caps {
-        font-family: {{ .Site.Params.SerifFont }};
-        font-variant: small-caps;
-    }
-{{ else }}
-    .post-content > p:first-of-type::first-line {
-        font-family: "Alegreya SC";
-    }
-    .small-caps {
-        font-family: "Alegreya SC";
-    }
-{{ end }}
-
 {{  if (not .Site.Params.FontUrl) }}
     @import 'typographical/fonts';
     {{ if .Site.Params.EnableDevanagari }}
@@ -52,9 +26,7 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 @import 'typographical/base';
 @import 'typographical/code';
 @import 'typographical/post';
-//@import 'typographical/syntax';
 @import 'typographical/layout';
 @import 'typographical/pagination';
 @import 'typographical/catalogue';
 @import 'typographical/tweaks';
-//@import 'typographical/multipage';
