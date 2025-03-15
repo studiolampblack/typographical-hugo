@@ -35,8 +35,10 @@
 		{{ end }}
 		{{ if isset .Site.Params "twitter" }}
 			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+			<link rel="me" href="https://twitter.com/{{ .Site.Params.twitter }}">
 		{{ else if isset .Site.Author "twitter" }}
 			<meta name="twitter:site" content="@{{ .Site.Author.twitter }}">
+			<link rel="me" href="https://twitter.com/{{ .Site.Author.twitter }}">
 		{{ end }}
 		{{ if isset .Site.Params "mastodon" }}
 			<link rel="me" href="https://{{ .Site.Params.Mastodon.Server }}/@{{ replace .Site.Params.Mastodon.Username " @" "" }}">
