@@ -8,15 +8,17 @@
 		{{ partial "single/header.html" . }}
 
 		<!-- Content -->
-		{{- $Content := .Content -}}
-		{{- if .Site.Params.DropCap.Enable }}
+		<section class="post-content">
+			{{- $Content := .Content -}}
+			{{- if .Site.Params.DropCap.Enable }}
 			{{- $regexPatternDropCap := `(<p>)([^<])(.+(< /p>|\n))` -}}
 			{{- $regexReplacementDropCap := `$1<span class="drop-cap">$2</span>$3` -}}
 			{{- $firstParagraphOld := (delimit (findRE $regexPatternDropCap $Content 1) " ") -}}
 			{{- $firstParagraphNew := (replaceRE $regexPatternDropCap $regexReplacementDropCap $firstParagraphOld) -}}
 			{{- $Content = replace $Content $firstParagraphOld $firstParagraphNew -}}
-		{{- end }}
-		{{- $Content | safeHTML -}}
+			{{- end }}
+			{{- $Content | safeHTML -}}
+		</section>
 		<!-- End content -->
 		{{ partial "single/patreon.html" . }}
 		{{ partial "single/footer.html" . }}

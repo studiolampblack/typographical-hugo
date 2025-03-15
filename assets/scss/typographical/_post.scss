@@ -75,11 +75,6 @@
     margin: 0;
   }
 
-  &> p:first-of-type::first-line {
-    text-transform: lowercase;
-    letter-spacing: 0.01em;
-  }
-
   .drop-cap {
     font-size: $drop-cap-size;
     float: left;
@@ -89,6 +84,7 @@
 
   & > .post-subtitle {
     font-size: $base-font-size;
+    line-height: 1.38;
     font-family: $serif-primary;
     font-style: italic;
     font-weight: normal;
@@ -300,4 +296,11 @@
 
 .relatedposts {
   margin: 2.5em 0;
+}
+
+.post-content {
+    &> p:first-of-type::first-line {
+    text-transform: lowercase;
+    letter-spacing: 0.01em;
+  }
 }
