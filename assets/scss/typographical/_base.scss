@@ -95,7 +95,7 @@ input, textarea {
   width: 100%;
   resize: vertical;
   background: none;
-  @include theme('color',$grey-1);
+  @include theme('color',$default-color);
 
   &:focus {
     outline: none;
