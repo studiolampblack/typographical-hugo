@@ -30,6 +30,10 @@ Full UNICODE **character support** with diacritics.
 
 ![Full UNICODE character support with diacritics.](http://blogfiles.ramiyer.me/2020/Screenshot_2020-10-02-Reading-the-IAST.png)
 
+Devanagari support using Sahitya, from the same family as the body:
+
+![Devanagari support using Sahitya, from the same family as the body font](http://blogfiles.ramiyer.me/2020/2020-11-13-11-47-40.png)
+
 **Small-caps** and **blockquote** that does not hit you with design, but stands out.
 
 ![Small-caps and blockquote that does not hit you with design, but stands out.](http://blogfiles.ramiyer.me/2020/Screenshot_2020-10-02-COVID-and-Credibility.png)
@@ -56,13 +60,13 @@ Reverse-chronological **arrangement of posts by year and month**.
 
 If your site is also under version control using git, the easiest way to install this theme is to add it as a submodule. If you have not created a git repo for your project yet, you need to run `git init` beforehand. Inside the folder of your Hugo site, run the following command.
 
-```
+```bash
 git submodule add https://github.com/theramiyer/typographical-hugo.git themes/typographical
 ```
 
 Alternatively, you can clone the theme into your project.
 
-```
+```bash
 git clone https://github.com/theramiyer/typographical-hugo.git themes/typographical
 ```
 
@@ -70,13 +74,13 @@ git clone https://github.com/theramiyer/typographical-hugo.git themes/typographi
 
 Add the following line to `config.toml` to tell Hugo to use the theme.
 
-```
+```toml
 theme = "typographical"
 ```
 
 Alternatively, you can tell Hugo to use the theme with the `server` command.
 
-```
+```bash
 hugo server -t typographical
 ```
 
@@ -88,7 +92,7 @@ For more information, read the official [setup guide](https://gohugo.io/overview
 
 If you have installed the theme as a git submodule, you can update the theme by issuing the following command inside your project folder.
 
-```
+```bash
 git submodule update --remote --rebase
 ```
 
@@ -100,21 +104,19 @@ If you have cloned the theme, you can run `git pull` inside the theme folder.
 
 The top menu uses [Hugo Menus](https://gohugo.io/content-management/menus/), with the name of the menu being `main`. To turn on the menu, follow the steps there - you can either add something like this to the front-matter of your pages:
 
-```
----
-menu: "main"
----
+```toml
+menu = "main"
 ```
 
 ... or you can add a menu section to your `config` file:
 
-```
+```toml
 sectionPagesMenu = "main"
 ```
 
 Or if you want more control, add a specific entry for each item in your menu:
 
-```
+```toml
 [menu]
   [[menu.main]]
     identifier = "about"
@@ -136,7 +138,7 @@ For menu internationalization/translation, see [Multilingual Mode: Menus](https:
 
 Tale supports using other languages than English. Language files for the texts Tale uses are provided in the `i18n` directory. The default language is English. To switch languages, add the key `defaultContentLanguage` to your `config.toml` file. For example:
 
-```
+```toml
 defaultContentLanguage = "nl"
 ```
 
@@ -171,7 +173,7 @@ This partial is included at the top of the list of posts on the index page, allo
 
 The copyright message in the footer uses the name of the author of the site, as defined in `config.toml`. For example:
 
-```
+```toml
 [Author]
     name = "Emiel"
 ```
@@ -180,16 +182,16 @@ The copyright message in the footer uses the name of the author of the site, as 
 
 The theme can load additional CSS files for you, e.g. to override some of the styles, or the CSS that goes with a component that you're using. To add additional CSS files, put these files in the `static` folder of your site and add the `css` parameter to `config.toml`, like so:
 
-```
+```toml
 [Params]
-css = ["custom.css"]
+    css = ["custom.css"]
 ```
 
 To load multiple CSS files, use the parameter like this:
 
-```
+```toml
 [Params]
-css = ["custom.css", "custom2.css"]
+    css = ["custom.css", "custom2.css"]
 ```
 
 ### Typographical hyphenation
@@ -198,12 +200,23 @@ Hyphenation does not work on Chrome and Chromium-based browsers. To ensure a con
 
 To enable hyphenation, add the following key to your site config:
 
-```
+```toml
 [Params]
-enableTypographicalHyphenation = true
+    enableTypographicalHyphenation = true
 ```
 
 Do note that enabling Hyphenopoly-based hyphenation will lead to Google Pagespeed Insights showing you an "opportunity" involving the word pattern dictionary used by Hyphenopoly.
+
+### Devanāgari Support
+
+Devanāgari, according to me, is one of the most beautiful scripts created by mankind. Typographical supports Devanāgari for those who would like to include Sanskrit or Hindi (or any other language, for that matter) text, written in the script. The theme uses the Sahitya font, which is part of the Alegreya super-family---this maintains the visual feel of the content.
+
+To enable support for Devanagari text using the Sahitya font add the following to your site config:
+
+```toml
+[Params]
+    enableDevanagari = true
+```
 
 ## Acknowledgments
 
