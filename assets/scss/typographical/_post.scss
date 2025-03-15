@@ -10,6 +10,10 @@
     span {
       font-style: italic;
     }
+
+    a {
+      color: inherit;
+    }
   }
 
   &-title {
@@ -37,7 +41,17 @@
   }
 
   img {
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 0.5rem -12.5%;
+    max-width: 125%;
+  }
+
+  figure {
+    margin: 0;
+
+    &> figcaption p {
+      text-align: center;
+      font-size: 1em;
+    }
   }
 
   img + em {
@@ -60,4 +74,218 @@
     padding: 0;
     margin: 0;
   }
+
+  &> p:first-of-type::first-line {
+    text-transform: lowercase;
+    letter-spacing: 0.01em;
+  }
+
+  .drop-cap {
+    font-size: $drop-cap-size;
+    float: left;
+    line-height: 1;
+    margin: $drop-cap-margins;
+  }
+
+  & > .post-subtitle {
+    font-size: $base-font-size;
+    font-family: $serif-primary;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  h3 {
+    font-size: 1.4em;
+  }
+
+  li {
+    font-size: $base-font-size;
+  }
+
+  &> .footnotes {
+    ol li, ol li p {
+      font-size: 0.9 * $base-font-size;
+    }
+
+    .reversefootnote {
+      background: none;
+    }
+  }
+
+  blockquote p {
+    font-size: 0.9 * $base-font-size;
+  }
+}
+
+.update-info {
+  font-family: $monospaced;
+  text-align: center;
+  font-size: 0.8em;
+  color: $grey-1;
+  
+  a {
+    background: none;
+  }
+}
+
+.podcast-badge {
+  text-align: center;
+  margin-bottom: 1em;
+
+  p {
+    font-size: 1em;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0;
+    display: inline;
+    margin: 0 0.5em;
+  }
+}
+
+.ethical-ads-container {
+  text-align: center;
+}
+
+.tinyletter-subscription {
+  font-size:0.9rem;
+  form {
+    padding:0.5em;
+    text-align:center;
+  }
+  input[type="text"] {
+    text-align:center;
+    max-width:20em;
+  }
+  input[type="submit"] {
+    max-width:8em;
+    background-color: $accent-color;
+    border-radius:0.2em;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+  }
+}
+
+.instagram-media {
+  margin: 0 auto 1em auto !important;
+
+  p {
+    line-height: 1.05em;
+  }
+
+  a {
+    background: none;
+  }
+}
+
+.twitter-tweet {
+  margin-bottom: 1em;
+}
+
+.support-button {
+  text-align: center;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.gotcha {
+  display: none;
+}
+
+.footnote-backref {
+  display: none;
+}
+
+.contact-form {
+  margin-bottom: 2em;
+
+  input[type="submit"] {
+    display: block;
+    background: $accent-color;
+    max-width: 8em;
+    margin: 0 auto;
+    border-radius: 0.15em;
+    /* Disable iOS and Mozilla button overrides*/
+    -webkit-appearance: none;
+      -moz-appearance: none;
+  }
+}
+
+.yt-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.yt-container, .spotify-container {
+  margin-bottom: 1em;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.4rem;
+}
+
+.search-bar {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.archive {
+  &-month {
+    margin-left: 0.67em;
+  }
+
+  &-post-title {
+    margin-left: 2em;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.small-caps {
+  letter-spacing: 0.01em;
+  text-transform: lowercase;
+}
+
+.page .post-title, .post .post-title, .catalogue-title {
+  text-transform: lowercase;
+  font-weight: 800;
+}
+
+.relatedposts, .post {
+  ul li {
+    font-size: $base-font-size;
+    list-style-type: square;
+  }
+}
+
+#TableOfContents {
+  color: $accent-color;
+  li a {
+    background: none;
+  }
+}
+
+.relatedposts {
+  margin: 2.5em 0;
 }
