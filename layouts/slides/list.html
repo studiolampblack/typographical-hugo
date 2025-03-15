@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+<main>
+    <div class="post">
+        {{ partial "single/title.html" . }}
+
+        {{ partial "single/header.html" . }}
+
+        <section class="post-list">
+            {{ range where .Site.RegularPages "Type" "in" "slides" }}
+            <p class="archive-post-title"><a href="{{ .Permalink | relURL }}">{{ .Title }}</a></p>
+            {{ end }}
+        </section>
+
+    </div>
+</main>
+
+{{ end }}

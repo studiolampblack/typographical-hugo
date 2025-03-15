@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ .Title }}</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.typekit.net/qzr0rss.css">
+        <link rel="stylesheet" href="/css/remark.css">
+    </head>
+    <body>
+        <textarea id="source">
+{{- .RawContent -}}
+        </textarea>
+        <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js"></script>
+        <script>
+            var slideshow = remark.create({
+                ratio: '16:9',
+                highlightStyle: 'tomorrow-night'
+            })
+        </script>
+    </body>
+</html>
