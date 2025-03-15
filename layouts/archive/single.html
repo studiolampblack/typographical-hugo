@@ -6,7 +6,7 @@
     
         {{ partial "single/header.html" . }}
 
-        {{ .Content | replaceRE "\\b([A-Z][A-Z0-9]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}
+        {{ .Content | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}
     
         {{ partial "search.html" }}
 

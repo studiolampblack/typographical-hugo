@@ -5,7 +5,7 @@
         <div class="catalogue-line"></div>
 
         <p>
-            {{ if isset .Params "summary" }}{{ .Params.Summary | markdownify | replaceRE "\\b([A-Z][A-Z0-9]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ else }}{{ .Summary | replaceRE "\\b([A-Z][A-Z0-9]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ end }}
+            {{ if isset .Params "summary" }}{{ .Params.Summary | markdownify | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ else }}{{ .Summary | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ end }}
         </p>
     </div>
 </a>
