@@ -346,6 +346,17 @@ hr {
   }
 }
 
+.update-info {
+  font-family: $monospaced;
+  text-align: center;
+  font-size: 0.8em;
+  color: $grey-1;
+  
+  a {
+    background: none;
+  }
+}
+
 // OpenType typographical settings
 .post {
   font-variant-numeric: oldstyle-nums;
