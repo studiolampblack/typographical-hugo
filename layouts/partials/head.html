@@ -14,10 +14,13 @@
 		{{- $cssTarget		:= "css/style.css" }}
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | toCSS $cssOptions }}
-		
+
 		<link rel="preload" as="style" type="text/css" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
 		<link rel="preload" as="style" type="text/css" href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:800|Alegreya:400,400i&subset=latin-ext&display=swap">
-
+		{{ if .Site.Params.enableDevanagari }}
+			<link rel="preload" as="style" type="text/css" href="/css/fonts.css" onload="this.rel='stylesheet'">
+		{{ end }}
+		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:800|Alegreya:400,400i&subset=latin-ext&display=swap">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="/css/fonts.css">
