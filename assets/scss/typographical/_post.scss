@@ -331,5 +331,13 @@ abbr, .small-caps, .post-content > p:first-of-type::first-line {
       top: -0.4em;
       left: -0.1em;
     }
+
+    &:hover {
+      &::after {
+        top: -0.5em;
+        left: -0em;
+        transition: 0.2s;
+      }
+    }
   }
 }
