@@ -12,6 +12,10 @@
 		{{ partial "single/footer.html" . }}
 	</div>
 	{{ partial "single/share.html" . }}
+	{{ partial "single/related.html" . }}
+	{{- if .Params.Tags }}
+		<div class="hidden">{{ delimit .Params.Tags ", " }}</div>
+	{{- end }}
 
 	<div class="pagination">
 		{{- if .PrevPage }}
