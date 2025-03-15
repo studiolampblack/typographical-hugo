@@ -18,9 +18,9 @@ A post with **emphasis on the title**, **drop-cap** and first line in **small-ca
 
 ![Embeddable charts, support for raw HTML.](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Can-we-be-free-of-Chinese-goods(1).png)
 
-**Related posts** and **share buttons** (Twitter gets hash tags based on post tags).
+**Related posts** and **share buttons** (X gets hash tags based on post tags).
 
-![Related posts and share buttons (Twitter generates hash tags based on post tags).](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
+![Related posts and share buttons (X generates hash tags based on post tags).](https://blogfiles.ramiyer.me/2020/images/Screenshot_2020-10-02-Archive(2).png)
 
 Embeddable **YouTube video** where you can specify start and end times to play a short clip.
 

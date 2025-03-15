@@ -33,12 +33,12 @@
 		{{ with .Site.Params.fbAppId }}
 			<meta property="fb:app_id" content="{{ . }}">
 		{{ end }}
-		{{ if isset .Site.Params "twitter" }}
-			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
-			<link rel="me" href="https://twitter.com/{{ .Site.Params.twitter }}">
-		{{ else if isset .Site.Params.Author "twitter" }}
-			<meta name="twitter:site" content="@{{ .Site.Params.Author.twitter }}">
-			<link rel="me" href="https://twitter.com/{{ .Site.Params.Author.twitter }}">
+		{{ if isset .Site.Params "x" }}
+			<meta name="twitter:site" content="@{{ .Site.Params.x }}">
+			<link rel="me" href="https://x.com/{{ .Site.Params.x }}">
+		{{ else if isset .Site.Params.Author "x" }}
+			<meta name="twitter:site" content="@{{ .Site.Params.Author.x }}">
+			<link rel="me" href="https://x.com/{{ .Site.Params.Author.x }}">
 		{{ end }}
 		{{ if isset .Site.Params "mastodon" }}
 			<link rel="me" href="https://{{ .Site.Params.Mastodon.Server }}/@{{ replace .Site.Params.Mastodon.Username " @" "" }}">

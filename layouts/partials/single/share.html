@@ -7,9 +7,9 @@
                 <i class="fab fa-facebook-square"></i>
             </a>
     
-            <a href="https://twitter.com/intent/tweet?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
-                title="Share on Twitter" target="_blank">
-                <i class="fab fa-twitter-square"></i>
+            <a href="https://x.com/intent/post?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
+                title="Share on X" target="_blank">
+                <i class="fab fa-square-x-twitter"></i>
             </a>
     
             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}&summary={{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}&source={{ .Site.Title }}"
