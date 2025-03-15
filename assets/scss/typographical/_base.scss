@@ -61,10 +61,6 @@ img {
   max-width: 100%;
 }
 
-td {
-  vertical-align: top;
-}
-
 hr {
   border-top: solid 0.02em;
   @include theme('border-color',$grey-2);
@@ -73,22 +69,18 @@ hr {
 }
 
 table {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1em;
-  display: block;
-  overflow-x: auto;
+  margin: 0 auto 1em;
 }
 
 th, td {
   padding-left: 0.3em;
   padding-right: 0.3em;
+  vertical-align: top;
 }
 
 th {
   font-family: $sans-serif;
   font-size: 1.1em;
-  vertical-align: top;
 }
 
 input, textarea {
