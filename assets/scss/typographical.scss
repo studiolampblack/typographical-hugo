@@ -52,7 +52,7 @@ $drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.
 @import 'typographical/base';
 @import 'typographical/code';
 @import 'typographical/post';
-@import 'typographical/syntax';
+//@import 'typographical/syntax';
 @import 'typographical/layout';
 @import 'typographical/pagination';
 @import 'typographical/catalogue';
