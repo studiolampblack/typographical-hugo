@@ -30,6 +30,9 @@
 		{{- end }}
 		<meta property="og:site_name" content="{{ .Site.Title }}">
 		<meta property="og:locale" content="{{ .Site.LanguageCode | default " en" }}">
+		{{ with .Site.Params.fbAppId }}
+			<meta name="fb:app_id" content="{{ . }}">
+		{{ end }}
 		{{ if isset .Site.Params "twitter" }}
 			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
 		{{ else if isset .Site.Author "twitter" }}
