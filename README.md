@@ -192,6 +192,19 @@ To load multiple CSS files, use the parameter like this:
 css = ["custom.css", "custom2.css"]
 ```
 
+### Typographical hyphenation
+
+Hyphenation does not work on Chrome and Chromium-based browsers. To ensure a consistent look as well as better reading experience (given that browsers still cannot justify text in a balanced fashion), this theme uses Hyphenopoly to insert soft hyphens where words can break. This way, Chromium-based browsers render the hyphens. The CSS also has the appropriate configuration to handle this.
+
+To enable hyphenation, add the following key to your site config:
+
+```
+[Params]
+enableTypographicalHyphenation = true
+```
+
+Do note that enabling Hyphenopoly-based hyphenation will lead to Google Pagespeed Insights showing you an "opportunity" involving the word pattern dictionary used by Hyphenopoly.
+
 ## Acknowledgments
 
 Thanks
