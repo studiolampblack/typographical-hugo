@@ -19,6 +19,7 @@ html {
 }
 
 body {
+  counter-reset: sidenote-counter;
   -webkit-text-size-adjust: 100%;
 
   -webkit-hyphens: auto;
