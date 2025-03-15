@@ -1,7 +1,9 @@
 {{ $applePodcasts := .Site.Params.applePodcastsId }}
 {{ $googlePodcasts := .Site.Params.googlePodcastsId }}
+{{ $message := .Get 0 | default "This post is also a podcast episode." }}
 {{ with .Page.Params.Episode }}
     <div class="podcast-badge">
+        <p>{{ $message }}</p>
         {{ with .Apple }}
             <a href="https://podcasts.apple.com/podcast/{{ $applePodcasts }}?i={{ . }}" target="_blank">
                 <img src="/images/podcast/apple-podcasts.svg" alt="Listen on Apple Podcasts">
