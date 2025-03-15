@@ -12,7 +12,7 @@
 
         <section class="post-list">
             {{ $MyYear := 3000 }}
-            {{ $MyMonth := "Aashaadha" }}
+            {{ $MyMonth := "Chaitra" }}
 
             {{ range where .Site.RegularPages "Type" "in" "post" }}
                 {{ $CurrentMonth := (dateFormat "January 2006" .Date) }}
