@@ -1,10 +1,53 @@
+// Themes
+$dark-theme: "dark-theme";
+$light-theme: "light-theme";
+
+$default-color: "default-color";
+$default-background: "default-background";
+$default-tint: "default-tint";
+$grey-1: "grey-1";
+$grey-2: "grey-2";
+$grey-3: "grey-3";
+
+$themes: (
+  $light-theme: (
+    $default-color: #222,
+    $default-background: #fff,
+    $default-tint: #aaa,
+    $grey-1: #979797,
+    $grey-2: #e5e5e5,
+    $grey-3: #f9f9f9,
+  ),
+  $dark-theme: (
+    $default-color: #ddd,
+    $default-background: #222,
+    $default-tint: #555,
+    $grey-1: #686868,
+    $grey-2: #1a1a1a,
+    $grey-3: #060606,
+  )
+);
+
+@mixin themeProperty($theme, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties) {
+  @if $additionalPropertiesPositionIsFront {
+    #{$property}: unquote($additionalProperties + ' ' + map-get($theme, $color));
+  } @else {
+    #{$property}: unquote(map-get($theme, $color) + ' ' + $additionalProperties);
+  }
+}
+
+@mixin theme($property, $color, $additionalPropertiesPositionIsFront: false, $additionalProperties: '') {
+  $light: map-get($themes, $light-theme);
+  $dark: map-get($themes, $dark-theme);
+  
+  @include themeProperty($light, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+
+  @media (prefers-color-scheme: dark) {
+    @include themeProperty($dark, $property, $color, $additionalPropertiesPositionIsFront, $additionalProperties);
+  }
+}
+
 // Colors
-$default-color: #222;
-$default-background: #fff;
-$default-tint: #aaa;
-$grey-1: #979797;
-$grey-2: #e5e5e5;
-$grey-3: #f9f9f9;
 $shadow-color: rgba(0, 0, 0, .2);
 $base-font-size: 1.2rem;
 $fa-font-path: "/fonts";
