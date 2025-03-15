@@ -29,4 +29,9 @@
 
 		<!-- RSS -->
 		<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+		<!-- Google Analytics -->
+		{{ if not (in (.Site.BaseURL | string) "localhost") }}
+			{{ template "_internal/google_analytics_async.html" . }}
+		{{ end }}
 	</head>
