@@ -2,7 +2,7 @@
   padding: 3rem 0;
 
   &-info {
-    color: $default-tint;
+    @include theme('color',$default-tint);
     font-family: $serif-secondary;
     letter-spacing: 0.02em;
     text-align: center;
@@ -54,7 +54,7 @@
   }
 
   img + em {
-    color: $default-tint;
+    @include theme('color',$default-tint);
     display: block;
     font-family: $sans-serif;
     font-size: 0.9rem;
@@ -124,7 +124,7 @@
   font-family: $monospaced;
   text-align: center;
   font-size: 0.8em;
-  color: $grey-1;
+  @include theme('color',$grey-1);
   
   a {
     background: none;
@@ -198,7 +198,8 @@
 
 .patreon-button {
   font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
-  background-color: $accent-color;
+  background-color: #f96854;
+  color: white;
   border-radius: 1.2em;
   padding: 0.4em;
   max-width: 11em;

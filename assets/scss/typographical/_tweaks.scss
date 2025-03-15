@@ -57,7 +57,7 @@
         font-size: 1.3em;
 
         a {
-          color: $grey-1;
+          @include theme('color',$grey-1);
         }
       }
     }
