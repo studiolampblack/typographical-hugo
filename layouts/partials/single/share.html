@@ -4,22 +4,22 @@
         <span class="share-buttons">
             <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" title="Share on Facebook"
                 target="_blank">
-                <i class="fab fa-facebook-square"></i>
+                <i class="fa-brands fa-facebook-square"></i>
             </a>
     
-            <a href="https://twitter.com/intent/tweet?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
-                title="Share on Twitter" target="_blank">
-                <i class="fab fa-twitter-square"></i>
+            <a href="https://x.com/intent/post?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }}&url={{ .Permalink }}{{- if .Params.Tags }}&hashtags={{ delimit .Params.Tags `,` }}{{- end }}"
+                title="Share on X" target="_blank">
+                <i class="fa-brands fa-square-x-twitter"></i>
             </a>
     
             <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}&summary={{ if .Description }}{{ .Description }}{{ else }}{{ .Summary }}{{ end }}&source={{ .Site.Title }}"
                 title="Share on LinkedIn" target="_blank">
-                <i class="fab fa-linkedin"></i>
+                <i class="fa-brands fa-linkedin"></i>
             </a>
     
             <a href="whatsapp://send?text={{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }} | {{ .Site.Title }} {{ .Permalink }}"
                 data-action="share/whatsapp/share" title="Share using WhatsApp" target="_blank">
-                <i class="fab fa-whatsapp-square"></i>
+                <i class="fa-brands fa-whatsapp-square"></i>
             </a>
         </span>
     </div>
