@@ -9,6 +9,21 @@
 
 		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 
+		<!-- Hyphenopoly -->
+		<script>
+			var Hyphenopoly = {
+				require: {
+					"en-gb": "Supercalifragilisticexpialidocious"
+				},
+				setup: {
+					selectors: {
+						"p": {}
+					}
+				}
+			};
+		</script>
+		<script src="/js/Hyphenopoly_Loader.js"></script>
+
 		<!-- CSS -->
 		{{- $inServerMode	:= .Site.IsServer }}
 		{{- $cssTarget		:= "css/style.css" }}
