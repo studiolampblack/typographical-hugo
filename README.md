@@ -30,10 +30,6 @@ Full UNICODE **character support** with diacritics.
 
 ![Full UNICODE character support with diacritics.](http://blogfiles.ramiyer.me/2020/Screenshot_2020-10-02-Reading-the-IAST.png)
 
-Devanagari support using Sahitya, from the same family as the body:
-
-![Devanagari support using Sahitya, from the same family as the body font](http://blogfiles.ramiyer.me/2020/2020-11-13-11-47-40.png)
-
 **Small-caps** and **blockquote** that does not hit you with design, but stands out.
 
 ![Small-caps and blockquote that does not hit you with design, but stands out.](http://blogfiles.ramiyer.me/2020/Screenshot_2020-10-02-COVID-and-Credibility.png)
