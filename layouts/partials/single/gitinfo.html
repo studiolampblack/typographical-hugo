@@ -1,0 +1,1 @@
+{{ if .GitInfo }}<p class="post-info">Last updated {{ .GitInfo.AuthorDate.Format "January 2, 2006" }} through {{ if .Site.Params.commitUrl }}<a target="_blank" href="{{ .Site.Params.commitUrl }}/{{ .GitInfo.Hash }}">{{ .GitInfo.AbbreviatedHash }}</a>{{ else }}{{ .GitInfo.AbbreviatedHash }}{{ end }}</p>{{ end }}
