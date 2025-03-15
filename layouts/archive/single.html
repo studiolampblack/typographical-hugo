@@ -1,0 +1,55 @@
+{{ define "main" }}
+
+<main>
+    <div class="page">
+        {{ partial "single/title.html" . }}
+    
+        {{ partial "single/header.html" . }}
+
+        {{ .Content }}
+    
+        {{ partial "search.html" }}
+
+        <section class="post-list">
+            {{ $MyYear := 3000 }}
+            {{ $MyMonth := "Aashaadha" }}
+
+            {{ range where .Site.RegularPages "Type" "in" "post" }}
+                {{ $CurrentMonth := (dateFormat "January 2006" .Date) }}
+                {{ $CurrentYear := (dateFormat "2006" .Date) }}
+                
+                {{ if ne $CurrentYear $MyYear}}
+                    <h4>{{ $CurrentYear }}</h4><span>| </span>
+                    {{ $MyYear = $CurrentYear }}
+                {{ end }}
+                
+                {{ if ne $CurrentMonth $MyMonth }}
+                    <span><a href="#{{ anchorize $CurrentMonth }}">{{ substr $CurrentMonth 0 -5 }}</a>&nbsp;| </span>
+                    {{ $MyMonth = $CurrentMonth }}
+                {{ end }}
+            {{ end }}
+
+            <hr />
+            
+            {{ range where .Site.RegularPages "Type" "in" "post" }}
+                {{ $CurrentMonth := (dateFormat "January 2006" .Date) }}
+                {{ $CurrentYear := (dateFormat "2006" .Date) }}
+
+                {{ if ne $CurrentYear $MyYear}}
+                    <h3 id="{{ anchorize $CurrentYear }}">{{ $CurrentYear }}</h3>
+                    {{ $MyYear = $CurrentYear }}
+                {{ end }}
+
+                {{ if ne $CurrentMonth $MyMonth }}
+                    <h4 id="{{ anchorize $CurrentMonth }}" class="archive-month">{{ substr $CurrentMonth 0 -5 }}</h4>
+                    {{ $MyMonth = $CurrentMonth }}
+                {{ end }}
+                <p class="archive-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a> | {{ dateFormat "Jan 02, 2006" .Date }}</p>
+            {{ end }}
+        </section>
+    
+        {{ partial "single/footer.html" . }}
+    </div>
+</main>
+
+{{ end }}
