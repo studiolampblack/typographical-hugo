@@ -57,6 +57,7 @@ input:focus, textarea:focus {
 
 .page .post-title, .post .post-title, .catalogue-title {
   text-transform: lowercase;
+  font-weight: 800;
 }
 
 .post > .post-subtitle {
@@ -306,4 +307,5 @@ th {
 
 h1, h2, h3, h4, h5, h6 {
   hyphens: none;
+  font-weight: 800;
 }
