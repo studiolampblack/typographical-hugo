@@ -2,7 +2,7 @@
   &-item {
     border-bottom: 1px solid $grey-2;
     color: $default-color;
-    display: block;
+    display: inline-block;
     padding: 2rem 0;
 
     &:hover .catalogue-line,
@@ -13,12 +13,16 @@
     &:last-child {
       border: 0;
     }
+
+    p {
+      font-size: $base-font-size;
+    }
   }
 
   &-time {
     color: $default-tint;
     font-family: $serif-secondary;
-    letter-spacing: .5px;
+    letter-spacing: 0.02em;
   }
 
   &-title {
@@ -32,7 +36,7 @@
 
   &-line {
     @include transition(all .3s ease-out);
-    border-top: .2rem solid $default-shade;
+    border-top: .2rem solid $accent-color;
     display: block;
     width: 2rem;
   }

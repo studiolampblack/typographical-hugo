@@ -1,6 +1,6 @@
 .container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 50em;
   width: 80%;
 }
 
@@ -9,7 +9,7 @@ footer,
 .nav-container {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 36em;
   width: 80%;
 }
 
@@ -48,7 +48,7 @@ footer,
     color: $default-color;
     display: inline-block;
     opacity: .6;
-    padding: 0 2rem 0 0;
+    padding: 0 1rem 0 0;
 
     &:last-child {
       padding-right: 0;
@@ -66,7 +66,7 @@ footer,
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   .nav {
     &-container {
       text-align: left;
@@ -89,4 +89,18 @@ footer {
     color: $default-color;
     font-size: .8rem;
   }
+}
+
+.share-bar {
+  text-align: center;
+}
+
+.share-bar a {
+  margin: 0 0.15em;
+  color: $default-color;
+  font-size: 1.6em;
+}
+
+.share-bar a:hover {
+  color: $accent-color;
 }
