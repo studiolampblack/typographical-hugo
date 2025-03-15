@@ -1,13 +1,43 @@
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
 		{{- if .IsHome }}
 			<meta name="description" content="{{ .Site.Params.Description }}">
 		{{- else if .Description }}
 			<meta name="description" content="{{ .Description }}">
 		{{- end }}
 
-		<title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }} &middot; {{ .Site.Title }}{{- end }}</title>
+		<!-- Social -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="{{ .Permalink }}">
+		<meta name="twitter:url" content="{{ .Permalink }}">
+		<meta property="og:title" content="{{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}">
+		<meta name="twitter:title" content="{{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}">
+		{{- if isset .Params "image" -}}
+			<meta property="og:image" content="{{ .Params.image }}">
+			<meta name="twitter:image" content="{{ .Params.image }}">
+		{{- end -}}
+		{{- if .IsHome }}
+			<meta property="og:description" content="{{ .Site.Params.Description }}">
+			<meta name="twitter:description" content="{{ .Site.Params.Description }}">
+		{{- else if .Description }}
+			<meta property="og:description" content="{{ .Description }}">
+			<meta name="twitter:description" content="{{ .Description }}">
+		{{- else if .Summary }}
+			<meta property="og:description" content="{{ .Summary }}">
+			<meta name="twitter:card" content="{{ .Summary }}">
+		{{- end }}
+		<meta property="og:site_name" content="{{ .Site.Title }}">
+		<meta property="og:locale" content="{{ .Site.LanguageCode | default " en" }}">
+		{{ if isset .Site.Params "twitter" }}
+			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
+		{{ else if isset .Site.Author "twitter" }}
+			<meta name="twitter:site" content="@{{ .Site.Author.twitter }}">
+		{{ end }}
+		{{ if isset .Site.Params "mastodon" }}
+			<link rel="me" href="https://{{ .Site.Params.Mastodon.Server }}/@{{ replace .Site.Params.Mastodon.Username " @" "" }}">
+		{{ end }}
 
 		<!-- Preload -->
 		{{ if (not .Site.Params.FontUrl) }}
@@ -53,37 +83,6 @@
 		<!-- Font Awesome -->
 		<script defer src="/js/fontawesome/all.min.js"></script>
 		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" crossorigin="anonymous"> -->
-		
-		<!-- Social -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="{{ .Permalink }}">
-		<meta name="twitter:url" content="{{ .Permalink }}">
-		<meta property="og:title" content="{{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}">
-		<meta name="twitter:title" content="{{ .Title }}{{ with .Params.Subtitle }}: {{ . }}{{ end }}">
-		{{- if isset .Params "image" -}}
-			<meta property="og:image" content="{{ .Params.image }}">
-			<meta name="twitter:image" content="{{ .Params.image }}">
-		{{- end -}}
-		{{- if .IsHome }}
-			<meta property="og:description" content="{{ .Site.Params.Description }}">
-			<meta name="twitter:description" content="{{ .Site.Params.Description }}">
-		{{- else if .Description }}
-			<meta property="og:description" content="{{ .Description }}">
-			<meta name="twitter:description" content="{{ .Description }}">
-		{{- else if .Summary }}
-			<meta property="og:description" content="{{ .Summary }}">
-			<meta name="twitter:card" content="{{ .Summary }}">
-		{{- end }}
-		<meta property="og:site_name" content="{{ .Site.Title }}">
-		<meta property="og:locale" content="{{ .Site.LanguageCode | default "en" }}">
-		{{ if isset .Site.Params "twitter" }}
-			<meta name="twitter:site" content="@{{ .Site.Params.twitter }}">
-		{{ else if isset .Site.Author "twitter" }}
-			<meta name="twitter:site" content="@{{ .Site.Author.twitter }}">
-		{{ end }}
-		{{ if isset .Site.Params "mastodon" }}
-			<link rel="me" href="https://{{ .Site.Params.Mastodon.Server }}/@{{ replace .Site.Params.Mastodon.Username "@" "" }}">
-		{{ end }}
 
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon-32x32.png" | relURL }}">
