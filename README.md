@@ -148,6 +148,8 @@ Feel free to submit pull requests for other translations of Tale's texts.
 
 Tale allows for writing the summary of your posts manually by setting the `summary` variable in the page frontmatter. If this variable is not set, the summary that Hugo automatically generates will be used.
 
+You can also completely disable the summary on the home page. Set the '[params.disableSummary]' key in the site config to achieve this.
+
 ### Taxonomies
 
 Tale has basic support for taxonomies. Taxonomy and terms pages will be generated when you have defined taxonomies, but you need to include links to these pages yourself. For example, you can add a link to a taxonomy page in `header-menu.html`.
