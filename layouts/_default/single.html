@@ -6,7 +6,9 @@
 
         {{ partial "single/header.html" . }}
 
-        {{ .Content }}
+        {{ $footnoteReturnLink := (printf "${1}%s${2}" "↥") }}
+        
+        {{ .Content | replaceRE "(<a (?:.*) class=\"footnote-backref\" (?:.*)>)(?:.*)(</a>)" $footnoteReturnLink | safeHTML }}
     </div>
 </main>
 
