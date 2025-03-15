@@ -221,11 +221,6 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
   }
 }
 
-.post-info > a::before {
-  content: "Written by ";
-  font-style: italic;
-}
-
 .post-info time::before {
   content: "on ";
   font-style: italic;
