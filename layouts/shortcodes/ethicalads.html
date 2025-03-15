@@ -1,4 +1,4 @@
-{{ if (and (not .Site.IsServer) .Site.Params.EthicalAds.PublisherId) }}
+{{ if (and (not hugo.IsServer) .Site.Params.EthicalAds.PublisherId) }}
     <div class="ethical-ads-container">
         <div class="{{ .Site.Params.EthicalAds.Class | default "flat horizontal" }}" data-ea-publisher="{{ .Site.Params.EthicalAds.PublisherId }}" data-ea-type="{{ .Get 0 | default "text" }}" id="{{ .Get 1 | default "post-ad" }}" {{ with .Page.Params.Tags }}data-ea-keywords="{{ delimit . `|` }}"{{ end }}></div>
     </div>

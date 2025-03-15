@@ -53,7 +53,7 @@
 		{{ end }}
 
 		<!-- CSS -->
-		{{- $inServerMode	:= .Site.IsServer }}
+		{{- $inServerMode	:= hugo.IsServer }}
 		{{- $cssTarget		:= "css/style.css" }}
 		{{- $cssOptions		:= cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true) (dict "targetPath" $cssTarget "outputStyle" "compressed") }}
 		{{- $style			:= resources.Get "scss/typographical.scss" | resources.ExecuteAsTemplate "scss/typographical.scss" . | toCSS $cssOptions | minify | fingerprint }}
@@ -103,7 +103,7 @@
 		<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 
 		<!-- Google Analytics -->
-		{{ if and (not site.IsServer) (.Site.GoogleAnalytics) }}
+		{{ if and (not hugo.IsServer) (.Site.GoogleAnalytics) }}
 			{{ template "_internal/google_analytics.html" . }}
 		{{ end }}
 
