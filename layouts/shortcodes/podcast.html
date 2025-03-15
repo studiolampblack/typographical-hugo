@@ -1,6 +1,6 @@
 {{ $applePodcasts := .Site.Params.applePodcastsId }}
 {{ $googlePodcasts := .Site.Params.googlePodcastsId }}
-{{ $message := .Get 0 | default "This post is also a podcast episode." }}
+{{ $message := .Get 0 | default "Listen to this post on your favourite podcast platform." }}
 {{ with .Page.Params.Episode }}
     <div class="podcast-badge">
         <p>{{ $message }}</p>
