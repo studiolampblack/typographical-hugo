@@ -82,7 +82,7 @@ Or if you want more control, add a specific entry for each item in your menu:
     identifier = "posts"
     name = "Posts"
     title = "Posts"
-    url = "/posts/"
+    url = "/post/"
     weight = 0
 ```
 
