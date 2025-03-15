@@ -188,7 +188,11 @@
 }
 
 .twitter-tweet {
-  margin: 1em auto !important;
+  margin-bottom: 1em;
+}
+
+.twitter-tweet-rendered {
+  margin: 0 auto;
 }
 
 .support-button {
