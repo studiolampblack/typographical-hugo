@@ -96,7 +96,7 @@
 }
 
 // Hacks
-::selection {
+::selection, strong {
   background-color: $accent-color;
-  color: $default-color;
+  color: $base-color;
 }
