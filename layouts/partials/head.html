@@ -100,7 +100,12 @@
 		{{ end }}
 
 		<!-- RSS -->
-		<link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		<!-- <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> -->
+		{{- with .Site.GetPage "/" }}
+			{{- range .OutputFormats }}
+				{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+			{{- end }}
+		{{- end }}
 
 		<!-- Google Analytics -->
 		{{ if and (not site.IsServer) (.Site.GoogleAnalytics) }}
