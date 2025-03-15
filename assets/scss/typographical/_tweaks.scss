@@ -43,16 +43,15 @@ input:focus, textarea:focus {
 }
 
 .post > p:first-of-type::first-line {
-  font-family: $sc-font;
   text-transform: lowercase;
   letter-spacing: 0.01em;
 }
 
 .post .drop-cap {
-  font-size: 5.8em;
+  font-size: $drop-cap-size;
   float: left;
   line-height: 1;
-  margin: -0.09em 0.03em -0.1em -0.05em;
+  margin: $drop-cap-margins;
 }
 
 .page .post-title, .post .post-title, .catalogue-title {
@@ -120,7 +119,7 @@ footer {
   }
 
   .post .drop-cap {
-    font-size: 5.2em;
+    font-size: $drop-cap-size-small;
   }
 
   .nav-title {
@@ -182,7 +181,6 @@ footer, .share-bar, .nav-container { /* Disable selection of some elements */
 }
 
 .small-caps {
-  font-family: $sc-font;
   letter-spacing: 0.01em;
   text-transform: lowercase;
 }

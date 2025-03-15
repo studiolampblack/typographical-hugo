@@ -1,3 +1,45 @@
+// Config-based customisation
+$code-color: {{ .Site.Params.CodeColour | default "#bf616a"}};
+$accent-color: {{ .Site.Params.AccentColour | default "#ffd900"}};
+
+// Fonts
+$serif-primary: {{ .Site.Params.SerifFont | default "Alegreya" }}, 'Times New Roman', Times, serif;
+$serif-secondary: {{ .Site.Params.SecondarySerifFont | default "Alegreya" }}, Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+$sans-serif: {{ .Site.Params.SansSerifFont | default "Alegreya Sans"}}, Helvetica, Arial, sans-serif;
+$monospaced: {{ .Site.Params.MonospaceFont | default "Fira Mono"}}, Menlo, Consolas, monospace;
+
+// Drop caps
+$drop-cap-size: {{ .Site.Params.DropCap.FontSize | default "5.8em" }};
+$drop-cap-size-small: {{ .Site.Params.DropCap.SmallScreenFontSize | default "5.2em" }};
+$drop-cap-margins: {{ .Site.Params.DropCap.Margins | default "-0.09em 0.03em -0.1em -0.05em" }};
+
+// Small-caps
+{{ if .Site.Params.ScFont }}
+    .post > p:first-of-type::first-line {
+        font-family: {{ .Site.Params.ScFont }};
+    }
+    .small-caps {
+        font-family: {{ .Site.Params.ScFont }};
+    }
+{{ else if .Site.Params.SerifFont }}
+    .post > p:first-of-type::first-line {
+        font-family: {{ .Site.Params.SerifFont }};
+        font-variant: small-caps;
+    }
+    .small-caps {
+        font-family: {{ .Site.Params.SerifFont }};
+        font-variant: small-caps;
+    }
+{{ else }}
+    .post > p:first-of-type::first-line {
+        font-family: "Alegreya SC";
+    }
+    .small-caps {
+        font-family: "Alegreya SC";
+    }
+{{ end }}
+
+// Import the rest
 @import 'typographical/variables';
 @import 'typographical/base';
 @import 'typographical/code';
