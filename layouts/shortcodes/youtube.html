@@ -6,5 +6,10 @@
     {{ end }}
     <div class="yt-container">
         <iframe src="//{{ $ytBaseUrl }}/embed/{{ if $.Page.Params.youtube }}{{ $.Page.Params.youtube }}{{ else }}{{ .Get 0}}{{ end }}?color=white&start={{ .Get 1}}&end={{ .Get 2 }}" frameborder="0" allowfullscreen class="video"></iframe>
+        <script>
+            window.addEventListener('beforeunload', function() {
+                localStorage.removeItem('yt-remote-device-id');
+            });
+        </script>
     </div>
 {{ end }}
