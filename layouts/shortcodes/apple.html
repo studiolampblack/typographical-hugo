@@ -1,10 +1,23 @@
 {{ $countryCode := .Site.Params.CountryId | default "us" }}
 {{ if .Site.Params.ApplePodcastsId }}
-    <iframe
-        src="https://embed.podcasts.apple.com/{{ $countryCode }}/podcast/{{ .Site.Params.ApplePodcastsId }}?i={{ if .Page.Params.Episode.apple }}{{ .Page.Params.Episode.apple }}{{ else }}{{ .Get 0 }}{{ end }}&amp;itsct=podcast_box&amp;itscg=30200&amp;theme=dark"
-        height="175px" frameborder="0"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        allow="autoplay *; encrypted-media *;"
-        style="width: 100%; overflow: hidden; border-radius: 10px; background: transparent;">
-    </iframe>
+    <div class="apple-container">
+        <div class="apple-placeholder" style="cursor: pointer; text-align: center; padding: 1em; border-radius: 4px;" onclick="loadAppleEmbed(this)" data-country="{{ $countryCode }}" data-id="{{ .Site.Params.ApplePodcastsId }}" data-episode="{{ if .Page.Params.Episode.apple }}{{ .Page.Params.Episode.apple }}{{ else }}{{ .Get 0 }}{{ end }}">
+            Click to listen to this article. Loading the Apple Podcasts player may let Apple set cookies and collect usage data.
+        </div>
+    </div>
+    <script>
+        function loadAppleEmbed(element) {
+            const iframe = document.createElement('iframe');
+            const country = element.dataset.country;
+            const podcastId = element.dataset.id;
+            const episodeId = element.dataset.episode;
+            iframe.src = `https://embed.podcasts.apple.com/${country}/podcast/${podcastId}?i=${episodeId}&amp;itsct=podcast_box&amp;itscg=30200&amp;theme=dark`;
+            iframe.height = "175px";
+            iframe.frameBorder = "0";
+            iframe.sandbox = "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation";
+            iframe.allow = "autoplay *; encrypted-media *;";
+            iframe.style = "width: 100%; overflow: hidden; border-radius: 10px; background: transparent;";
+            element.parentNode.replaceChild(iframe, element);
+        }
+    </script>
 {{ end }}

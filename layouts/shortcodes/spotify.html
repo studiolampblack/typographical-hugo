@@ -1,3 +1,18 @@
 <div class="spotify-container">
-    <iframe src="https://open.spotify.com/embed-podcast/episode/{{- if $.Page.Params.Episode.spotify }}{{ $.Page.Params.Episode.spotify }}{{- else }}{{ .Get 0}}{{- end }}" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="spotify-placeholder" style="cursor: pointer; text-align: center; padding: 1em; border-radius: 4px;" onclick="loadSpotifyEmbed(this)">
+        Click to listen to this article. Loading the Spotify player may let Spotify set cookies and collect usage data.
+    </div>
 </div>
+<script>
+    function loadSpotifyEmbed(element) {
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://open.spotify.com/embed-podcast/episode/" + 
+            (element.dataset.spotify || "{{ .Get 0 }}");
+        iframe.width = "100%";
+        iframe.height = "232";
+        iframe.frameBorder = "0";
+        iframe.allowTransparency = "true";
+        iframe.allow = "encrypted-media";
+        element.parentNode.replaceChild(iframe, element);
+    }
+</script>
