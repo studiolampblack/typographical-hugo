@@ -29,7 +29,7 @@
 			<meta name="twitter:card" content="{{ .Summary }}">
 		{{- end }}
 		<meta property="og:site_name" content="{{ .Site.Title }}">
-		<meta property="og:locale" content="{{ .Site.LanguageCode | default " en" }}">
+		<meta property="og:locale" content="{{ .Site.Language.Locale | default " en" }}">
 		{{ with .Site.Params.fbAppId }}
 			<meta property="fb:app_id" content="{{ . }}">
 		{{ end }}
