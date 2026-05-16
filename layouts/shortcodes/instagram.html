@@ -5,6 +5,8 @@
     {{- else -}}
         {{ $id := .Get 0 }}
         {{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
-        {{ with getJSON "https://graph.facebook.com/v8.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=" $hideCaption "&access_token=" .Site.Params.fbAppId "|" .Site.Params.fbAccessToken }}{{ .html | safeHTML }}{{ end }}
+        {{ $accessToken := print .Site.Params.fbAppId "|" .Site.Params.fbAccessToken }}
+        {{ $url := printf "https://graph.facebook.com/v8.0/instagram_oembed/?url=https://instagram.com/p/%s/&hidecaption=%s&access_token=%s" $id $hideCaption $accessToken }}
+        {{ with resources.GetRemote $url | transform.Unmarshal }}{{ .html | safeHTML }}{{ end }}
     {{- end -}}
 {{- end -}}
