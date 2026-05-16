@@ -6,7 +6,7 @@
 
         {{ if not .Site.Params.DisableSummary }}
             <p>
-                {{ if isset .Params "summary" }}{{ .Params.Summary | markdownify | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ else }}{{ .Summary | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ end }}
+                {{ if isset .Params "summary" }}{{ .Params.Summary | markdownify | replaceRE "<a[^>]*>" "" | replaceRE "</a>" "" | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ else }}{{ .Summary | replaceRE "<a[^>]*>" "" | replaceRE "</a>" "" | replaceRE "\\b([A-Z][A-Z0-9\\-]{2,})\\b" "<abbr>$1</abbr>" | safeHTML }}{{ end }}
             </p>
         {{ end }}
     </div>
