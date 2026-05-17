@@ -5,4 +5,13 @@
     {{- with .Site.Params.PostFooterHtml }}
         {{ . | safeHTML }}
     {{- end }}
+    {{- /* Show Amazon affiliate notice only on pages that include the amazon shortcode or the rendered amazon-affiliate HTML */ -}}
+    {{- $raw := default "" .RawContent -}}
+    {{- $rawHas := gt (len (findRE "(?s){{<\\s*amazon|{{%\\s*amazon" $raw)) 0 -}}
+    {{- $contentHas := gt (len (findRE "amazon-affiliate" .Content)) 0 -}}
+    {{- if or $rawHas $contentHas }}
+        {{- with .Site.Params.amazon.notice }}
+            <p class="post-footer-amazon">{{ . | markdownify }}</p>
+        {{- end }}
+    {{- end }}
 </div>
