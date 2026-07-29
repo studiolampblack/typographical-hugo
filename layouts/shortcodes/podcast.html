@@ -13,20 +13,20 @@
             <a href="https://podcasts.google.com/feed/{{ $googlePodcasts }}/episode/{{ . }}" target="_blank">
                 <img src="/images/podcast/google-podcasts.svg" alt="Listen on Google Podcasts">
             </a>
-        {{ end }}
-        {{ with .Youtube }}
-            <a href="https://music.youtube.com/watch?v={{ . }}" target="_blank">
-                <img src="/images/podcast/youtube-music.svg" alt="Listen on YouTube Music">
-            </a>
         {{ end }} 
         {{ with .Spotify }}
             <a href="https://open.spotify.com/episode/{{ . }}" target="_blank">
                 <img src="/images/podcast/spotify-podcast.svg" alt="Listen on Spotify">
             </a>
         {{ end }}
-                {{ with .Amazon }}
+        {{ with .Amazon }}
             <a href="https://music.amazon.in/podcasts/94f8fb07-e296-4542-93f2-ca8efab5b0f9/episodes/{{ . }}/" target="_blank">
                 <img src="/images/podcast/amazon-music.svg" alt="Listen on Amazon Music">
+            </a>
+        {{ end }}
+        {{ with .Youtube }}
+            <a href="https://music.youtube.com/watch?v={{ . }}" target="_blank">
+                <img src="/images/podcast/youtube-music.svg" alt="Listen on YouTube Music">
             </a>
         {{ end }}
     </div>
